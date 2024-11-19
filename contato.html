@@ -22,7 +22,7 @@
   <div class="container">
     <h1>Briefing - Identidade Visual</h1>
     <p>Olá! Suas respostas ajudarão a criar uma identidade forte e memorável. Tudo ok? Vamos lá!</p>
-    <form action="#" method="POST">
+    <form id="contact-form">
         <label for="nome-nome">Qual é o seu nome?</label>
         <input 
             type="text" 
@@ -97,8 +97,10 @@
             name="significado-abertura" 
             rows="4" 
             placeholder="Explique se há algum significado especial para a abertura da sua marca."></textarea>
-            <button class="submit" type="submit">Enviar</button>
-    </form>    
+        
+        <button class="submit" type="submit">Enviar</button>
+    </form>
+       
 
       <footer class="footer">
         <div class="logo-footer">
@@ -115,4 +117,27 @@
   </div>
 </body>
 <script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script type="text/javascript">
+    emailjs.init("USER_ID"); // Substitua com seu User ID fornecido pelo EmailJS
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Obtenha o elemento do formulário
+        const form = document.getElementById("contact-form");
+
+        // Envie o formulário usando emailjs.sendForm
+        emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", form)
+            .then((response) => {
+                console.log("E-mail enviado com sucesso!", response);
+                alert("E-mail enviado com sucesso!");
+                form.reset(); // Reseta o formulário após envio bem-sucedido
+            })
+            .catch((error) => {
+                console.error("Erro ao enviar o e-mail:", error);
+                alert("Erro ao enviar o e-mail: " + error.text);
+            });
+    });
+</script>
 </html>
