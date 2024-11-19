@@ -77,11 +77,32 @@ document.getElementById('toTopButton').addEventListener('click', function() {
   });
 });
 
-// Botão para rolar até a seção com a classe 'target-section'
 document.getElementById('toSectionButton').addEventListener('click', function() {
   const targetSection = document.querySelector('.sobremim');
-  targetSection.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
+
+  if (targetSection) {
+    targetSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  } else {
+    const targetUrl = 'index.html#sobremim';
+    window.location.href = targetUrl;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const fragment = window.location.hash;
+  
+  if (fragment) {
+    const targetSection = document.querySelector(fragment);
+    
+    if (targetSection) {
+      // Se a seção existir, rola até ela
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 });
