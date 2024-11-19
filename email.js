@@ -1,4 +1,4 @@
-emailjs.init(process.env.USER_ID); 
+emailjs.init(process.env.USER_ID);
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
