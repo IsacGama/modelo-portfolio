@@ -1,18 +1,16 @@
-emailjs.init(process.env.NEXT_PUBLIC_USER_ID);
+async function sendEmail(formData) {
+    const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ formData }),
+    });
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    if (!response.ok) {
+        throw new Error('Erro ao enviar o e-mail.');
+    }
 
-    const form = document.getElementById("contact-form");
-
-    emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form)
-        .then((response) => {
-            console.log("E-mail enviado com sucesso!", response);
-            alert("E-mail enviado com sucesso!");
-            form.reset(); 
-        })
-        .catch((error) => {
-            console.error("Erro ao enviar o e-mail:", error);
-            alert("Erro ao enviar o e-mail: " + error.text);
-        });
-});
+    const data = await response.json();
+    console.log(data.message);
+}
