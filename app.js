@@ -41,7 +41,6 @@ for (let i = 0; i < accServicos.length; i++) {
       // Abrindo o painel
       panel.style.maxHeight = panel.scrollHeight + "px";
 
-      // Ajustar os estilos
       this.style.borderBottomLeftRadius = "10px";
       this.style.borderBottomRightRadius = "10px";
       panel.style.borderBottomLeftRadius = "10px";
@@ -49,3 +48,24 @@ for (let i = 0; i < accServicos.length; i++) {
     }
   });
 }
+
+const elements = document.querySelectorAll('.titulo, .card, .accordion, .minhafoto, .titulosobremim, .paragrafosobremim, .accordionServicos, .img-proposta, .titulo-proposta, .paragrafo-proposta, button-proposta'); 
+
+// Criar uma instância do IntersectionObserver
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');  // Adiciona a classe de animação
+            entry.target.classList.remove('hidden'); // Remove a classe oculta
+            observer.unobserve(entry.target); // Parar de observar o elemento após a animação
+        }
+    });
+}, {
+    threshold: 0.1  // O elemento é considerado visível quando 50% dele estiver na tela
+});
+
+// Observa os elementos
+elements.forEach(element => {
+    element.classList.add('hidden');  // Inicialmente, os elementos estão invisíveis
+    observer.observe(element); // Observa cada elemento
+});
