@@ -392,7 +392,7 @@ main {
 /* Inicialmente os elementos são invisíveis e posicionados um pouco abaixo */
 .hidden {
     opacity: 0;
-    transform: translateY(50px);  /* Coloca o elemento um pouco abaixo */
+    transform: translateY(20px);  /* Coloca o elemento um pouco abaixo */
 }
 
 /* Quando o elemento se torna visível, ele vai desvanecer e deslizar para a posição normal */

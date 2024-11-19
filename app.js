@@ -69,3 +69,19 @@ elements.forEach(element => {
     element.classList.add('hidden');  // Inicialmente, os elementos estão invisíveis
     observer.observe(element); // Observa cada elemento
 });
+
+document.getElementById('toTopButton').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Botão para rolar até a seção com a classe 'target-section'
+document.getElementById('toSectionButton').addEventListener('click', function() {
+  const targetSection = document.querySelector('.sobremim');
+  targetSection.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
