@@ -1,0 +1,384 @@
+::-webkit-scrollbar{
+    width: 14px;
+    border-radius: 100px;
+}
+::-webkit-scrollbar-track{
+    background: #000000;
+}
+::-webkit-scrollbar-thumb { 
+    width: 6px;
+    background: #FFFFFF;
+     border: 3px solid #000000; /* Aumento da borda para 4px */
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover { 
+    width: 6px;
+    border: 3px solid #FFFFFF; /* Aumento da borda para 4px */
+    border-radius: 100px;
+    background: #000000;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: auto;
+    margin: 0;
+    background-color:rgba(0, 0, 0, 0.99);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align:center; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 25%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.link-header, .button-sobre-mim {
+    font-size: 1.2rem;
+}
+
+.button-sobre-mim {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    width: 58px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: black;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-top {
+    width: auto;
+    height: 100px;
+    margin-left: 100%;
+}
+
+.logo-down {
+    width: auto;
+    height: 100px;
+    margin-left: 100%;
+}
+
+.button-logo {
+    width: auto;
+    height: 100px;
+    margin-top: 10%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 0.3fr); 
+    justify-content: center;
+    align-content: center; 
+    row-gap: 30px;
+    column-gap: 50px;
+}
+
+.card {
+    width: 550px;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.metodologia {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    box-sizing: border-box;
+    background-color: #121212;
+    padding-bottom: 5%;
+}
+
+.accordion-container{
+    overflow: hidden;
+    border-radius: 20px; 
+    transition: border-radius 0.3s ease;
+}
+
+.titulo-metodologia, .titulo-entregaveis {
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.metodologias-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.textosobremim {
+    margin-left: 5%;
+
+}
+
+.titulosobremim {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.paragrafosobremim {
+    font-size: 1.25rem;
+    color: darkgray;
+}
+
+.sobremim{
+    display: flex;
+    align-items: center;
+}
+
+.minhafoto {
+    height:auto;
+    width: 400px;
+    border-radius: 10%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .image-container img {
+    transform: scale(1.2);
+}
+
+.text {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    transition: bottom 0.5s ease;
+}
+
+.card:hover .text {
+    bottom: 0;
+}
+
+.accordion {
+    background-color: transparent;
+    color:#fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2%;
+    margin-right: 2%;    
+  }
+
+  .accordionServicos {
+    background-color: black;
+    color:#fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2%;
+    margin-right: 2%; 
+    margin-top: 2%;
+    border-radius: 10px;
+  }
+  
+  .panel {
+    width: 88.5%;
+    border-bottom: gray solid 1px;;
+    outline: none;
+    padding: 0 18px;
+    margin-left: 2%;
+    background-color:rgba(0, 0, 0, 0.9);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .panel-servicos {
+    width: 87.35%;
+    outline: none;
+    padding: 0 18px;
+    margin-left: 2%;
+    background-color:rgba(0, 0, 0, 0.9);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .paragrafos-accordion {
+    font-size: 1.25rem;
+    text-align: justify;
+    color: darkgray;
+  }
+
+  .proposta {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .texto-proposta {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18%;
+  }
+
+  .titulo-proposta {
+    font-size: 2.75rem;
+    font-weight: bold;
+  }
+
+  .paragrafo-proposta {
+        width: 750px;
+        font-size: 1.25rem;
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
+        color: darkgray;
+  }
+
+  .button-proposta {
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease
+}
+
+.button-proposta:hover {
+    border: 1px solid #FFFFFF;
+    background: #000000;
+    color: white;
+}
+
+  .img-proposta {
+    height: auto;
+    width: 200px;
+    margin-left: 50%;
+    margin-top: 15%;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-right: 5%;
+  }
+
+  .links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .seta {
+    height: auto;
+    width: 15px;
+  }
+
+  .go-to-top {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  p, h1, h2 {
+    color: white;
+  }
