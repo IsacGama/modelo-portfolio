@@ -1,7 +1,7 @@
 <?php
 // Configuração de CORS
-header("Access-Control-Allow-Origin: https://modelo-portfolio-psi.vercel.app");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Origin: *"); // Ajuste para o domínio específico se necessário
+header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
