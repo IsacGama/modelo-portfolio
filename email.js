@@ -1,19 +1,30 @@
-document.getElementById("contact-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-    const formData = Object.fromEntries(new FormData(e.target));
+    const formData = new FormData(event.target);
+    const formDataObj = {};
+    formData.forEach((value, key) => {
+        formDataObj[key] = value;
+    });
 
     try {
-        const response = await fetch("/api/send-email", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
+        const response = await fetch('https://modelo-portfolio-psi.vercel.app/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formDataObj),
         });
 
-        const result = await response.json();
-        alert(result.message);
+        if (response.ok) {
+            const data = await response.json();
+            alert(data.message); // Mensagem de sucesso
+        } else {
+            const errorData = await response.json();
+            alert("Erro: " + errorData.error); // Mensagem de erro do servidor
+        }
     } catch (error) {
-        console.error("Erro:", error);
-        alert("Erro ao enviar o formulário.");
+        console.error('Erro ao enviar o formulário:', error);
+        alert('Erro ao enviar o formulário. Tente novamente.');
     }
 });
