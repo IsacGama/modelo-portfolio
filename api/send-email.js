@@ -20,7 +20,7 @@ export default async function handler(req, res) {
 
     // Configurar o transporte SMTP
     const transporter = nodemailer.createTransport({
-        service: "gmail", // ou 'hotmail', 'yahoo', etc.
+        service: "gmail",
         auth: {
             user: process.env.EMAIL_USER, // Seu e-mail
             pass: process.env.EMAIL_PASS, // Sua senha ou senha de aplicativo
