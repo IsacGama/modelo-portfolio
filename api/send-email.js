@@ -1,6 +1,10 @@
 const nodemailer = require('nodemailer');
 
 export default async function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Permite qualquer domínio
+    res.setHeader('Access-Control-Allow-Methods', 'POST'); // Permite apenas o método POST
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    
     if (req.method !== 'POST') {
         res.setHeader('Allow', ['POST']);
         return res.status(405).json({ error: 'Método não permitido' });
