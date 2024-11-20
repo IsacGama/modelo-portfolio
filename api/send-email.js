@@ -28,3 +28,6 @@ export default async function handler(req, res) {
         res.status(500).json({ error: error.message });
     }
 }
+console.log("USER_ID:", process.env.USER_ID);
+console.log("SERVICE_ID:", process.env.SERVICE_ID);
+console.log("TEMPLATE_ID:", process.env.TEMPLATE_ID);
