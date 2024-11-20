@@ -1,113 +1,49 @@
-import nodemailer from "nodemailer";
+import express from 'express';
+import nodemailer from 'nodemailer';
 
-export default async function handler(req, res) {
-    if (req.method !== "POST") {
-        return res.status(405).json({ error: "Método não permitido" });
-    }
+const app = express();
+app.use(express.json()); // Middleware para entender JSON
 
-    const {
-        nome,
-        email,
-        logotipo,
-        telefone,
-        historiaMarca,
-        sloganEmpresa,
-        sobreVoce,
-        relacaoEmpresa,
-        mercado,
-        significadoAbertura,
-    } = req.body;
+app.post('/api/send-email', async (req, res) => {
+    const { nome, email, logotipo, telefone, historiaMarca, sloganEmpresa, sobreVoce, relacaoEmpresa, mercado, significadoAbertura } = req.body;
 
-    // Configurar o transporte SMTP
+    // Configuração do Nodemailer para enviar o e-mail
     const transporter = nodemailer.createTransport({
-        service: "gmail",
+        service: 'gmail',
         auth: {
-            user: process.env.EMAIL_USER, // Seu e-mail
-            pass: process.env.EMAIL_PASS, // Sua senha ou senha de aplicativo
+            user: process.env.EMAIL_USER, // Coloque aqui sua variável de ambiente
+            pass: process.env.EMAIL_PASS, // Coloque aqui sua senha ou senha de app
         },
     });
 
-    // HTML do e-mail com placeholders substituídos
     const htmlContent = `
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nova Mensagem de Contato</title>
-        <style>
-            /* O estilo que você já forneceu */
-        </style>
-    </head>
-    <body>
-        <div class="email-container">
-            <div class="email-header">
-                <h1>Nova Mensagem de Contato</h1>
-            </div>
-            <div class="email-content">
-                <p>Você recebeu uma nova oportunidade de investimento:</p>
-                <div class="section">
-                    <p class="section-title">Nome:</p>
-                    <p>${nome}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Email:</p>
-                    <p>${email}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Nome do Logotipo:</p>
-                    <p>${logotipo}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Whatsapp:</p>
-                    <p>${telefone}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">História da Marca:</p>
-                    <p>${historiaMarca}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Slogan da Empresa:</p>
-                    <p>${sloganEmpresa}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Sobre Você:</p>
-                    <p>${sobreVoce}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Relação com a Empresa:</p>
-                    <p>${relacaoEmpresa}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Percepção do Mercado:</p>
-                    <p>${mercado}</p>
-                </div>
-                <div class="section">
-                    <p class="section-title">Significado da Abertura:</p>
-                    <p>${significadoAbertura}</p>
-                </div>
-            </div>
-            <div class="email-footer">
-                <p>Atenciosamente,</p>
-                <p><strong>Nunes Enterprise</strong></p>
-            </div>
-        </div>
-    </body>
-    </html>
+    <h1>Nova Mensagem de Contato</h1>
+    <p><strong>Nome:</strong> ${nome}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Nome do Logotipo:</strong> ${logotipo}</p>
+    <p><strong>Whatsapp:</strong> ${telefone}</p>
+    <p><strong>História da Marca:</strong> ${historiaMarca}</p>
+    <p><strong>Slogan da Empresa:</strong> ${sloganEmpresa}</p>
+    <p><strong>Sobre Você:</strong> ${sobreVoce}</p>
+    <p><strong>Relação com a Empresa:</strong> ${relacaoEmpresa}</p>
+    <p><strong>Percepção do Mercado:</strong> ${mercado}</p>
+    <p><strong>Significado da Abertura:</strong> ${significadoAbertura}</p>
     `;
 
     try {
-        // Enviar o e-mail
         await transporter.sendMail({
-            from: '"Nunes Enterprise" noreply.nunesenterprise@gmail.com', // Remetente
-            to: "diasgamaisac0@gmail.com", // Destinatário
-            subject: "Nova Mensagem de Contato", // Assunto
-            html: htmlContent, // Conteúdo HTML
+            from: '"Nunes Enterprise" noreply.nunesenterprise@gmail.com',
+            to: 'diasgamaisac0@gmail.com',
+            subject: 'Nova Mensagem de Contato',
+            html: htmlContent,
         });
-
-        res.status(200).json({ message: "E-mail enviado com sucesso!" });
+        res.status(200).json({ message: 'E-mail enviado com sucesso!' });
     } catch (error) {
-        console.error("Erro ao enviar o e-mail:", error);
-        res.status(500).json({ error: "Erro ao enviar o e-mail." });
+        console.error('Erro ao enviar o e-mail:', error);
+        res.status(500).json({ error: 'Erro ao enviar o e-mail' });
     }
-}
+});
+
+app.listen(5500, () => {
+    console.log('Servidor rodando na porta 3000');
+});

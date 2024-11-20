@@ -25,8 +25,9 @@ document.getElementById("contact-form").addEventListener("submit", async functio
             const data = await response.json();
             alert(data.message); // Exibe a mensagem de sucesso
         } else {
-            const data = await response.json();
-            alert("Erro: " + data.error); // Exibe mensagem de erro
+            // Caso o status não seja 2xx, exibe um erro mais informativo
+            const errorData = await response.text(); // Pega o texto da resposta
+            alert("Erro: " + errorData); // Exibe mensagem de erro
         }
     } catch (error) {
         console.error('Erro ao enviar o formulário:', error);
