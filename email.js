@@ -1,36 +1,115 @@
-document.getElementById("contact-form").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+import React, { useState } from 'react';
+import axios from 'axios';
 
-    // Coleta os dados do formulário
-    const formData = new FormData(event.target);
-    
-    // Converte os dados do formulário para um objeto JSON
-    const formDataObj = {};
-    formData.forEach((value, key) => {
-        formDataObj[key] = value;
+function FormularioContato() {
+    const [formData, setFormData] = useState({
+        nome: '',
+        email: '',
+        nomeLogotipo: '',
+        telefone: '',
+        historiaMarca: '',
+        sloganEmpresa: '',
+        sobreVoce: '',
+        relacaoEmpresa: '',
+        percepcaoMercado: '',
+        significadoAbertura: ''
     });
 
-    try {
-        // Envia os dados para a API do backend
-        const response = await fetch('/api/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formDataObj),
-        });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
-        // Verifica se a resposta foi bem-sucedida
-        if (response.ok) {
-            const data = await response.json();
-            alert(data.message); // Exibe a mensagem de sucesso
-        } else {
-            // Caso o status não seja 2xx, exibe um erro mais informativo
-            const errorData = await response.json(); // Pega o JSON da resposta de erro
-            alert("Erro: " + errorData.error); // Exibe mensagem de erro
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(
+                'http://localhost:3001/enviar-email', 
+                formData
+            );
+            alert(response.data.message);
+        } catch (error) {
+            console.error('Erro:', error);
+            alert('Erro ao enviar email');
         }
-    } catch (error) {
-        console.error('Erro ao enviar o formulário:', error);
-        alert('Erro ao enviar o formulário. Tente novamente.');
-    }
-});
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                name="nome"
+                placeholder="Nome"
+                value={formData.nome}
+                onChange={handleChange}
+                required
+            />
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+            />
+            <input
+                type="text"
+                name="nomeLogotipo"
+                placeholder="Nome do Logotipo"
+                value={formData.nomeLogotipo}
+                onChange={handleChange}
+            />
+            <input
+                type="tel"
+                name="telefone"
+                placeholder="Whatsapp"
+                value={formData.telefone}
+                onChange={handleChange}
+            />
+            <textarea
+                name="historiaMarca"
+                placeholder="História da Marca"
+                value={formData.historiaMarca}
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                name="sloganEmpresa"
+                placeholder="Slogan da Empresa"
+                value={formData.sloganEmpresa}
+                onChange={handleChange}
+            />
+            <textarea
+                name="sobreVoce"
+                placeholder="Sobre Você"
+                value={formData.sobreVoce}
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                name="relacaoEmpresa"
+                placeholder="Relação com a Empresa"
+                value={formData.relacaoEmpresa}
+                onChange={handleChange}
+            />
+            <textarea
+                name="percepcaoMercado"
+                placeholder="Percepção do Mercado"
+                value={formData.percepcaoMercado}
+                onChange={handleChange}
+            />
+            <textarea
+                name="significadoAbertura"
+                placeholder="Significado da Abertura"
+                value={formData.significadoAbertura}
+                onChange={handleChange}
+            />
+            <button type="submit">Enviar</button>
+        </form>
+    );
+}
+
+export default FormularioContato;
