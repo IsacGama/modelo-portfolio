@@ -5,7 +5,8 @@
     "dotenv": "^16.4.5",
     "emailjs-com": "^3.2.0",
     "express": "^4.21.1",
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^6.9.16",
+    "site-felipe": "file:"
   },
   "name": "site-felipe",
   "version": "1.0.0",

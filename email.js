@@ -18,10 +18,10 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 
         if (response.ok) {
             const data = await response.json();
-            alert(data.message); // Mensagem de sucesso
+            alert(data.message);
         } else {
             const errorData = await response.json();
-            alert("Erro: " + errorData.error); // Mensagem de erro do servidor
+            alert("Erro: " + errorData.error);
         }
     } catch (error) {
         console.error('Erro ao enviar o formulário:', error);
