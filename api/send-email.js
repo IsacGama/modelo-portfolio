@@ -99,8 +99,8 @@ export default async function handler(req, res) {
     try {
         // Enviar o e-mail
         await transporter.sendMail({
-            from: '"Nunes Enterprise" <seuemail@gmail.com>', // Remetente
-            to: "destinatario@exemplo.com", // Destinatário
+            from: '"Nunes Enterprise" noreply.nunesenterprise@gmail.com', // Remetente
+            to: "diasgamaisac0@gmail.com", // Destinatário
             subject: "Nova Mensagem de Contato", // Assunto
             html: htmlContent, // Conteúdo HTML
         });
