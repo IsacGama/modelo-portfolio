@@ -8,7 +8,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     });
 
     try {
-        const response = await fetch('https://modelo-portfolio-psi.vercel.app/api/send-email.php', {
+        const response = await fetch('https://modelo-portfolio-psi.vercel.app/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
