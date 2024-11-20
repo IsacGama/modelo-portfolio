@@ -64,12 +64,12 @@ try {
     $mail->Host = 'smtp.gmail.com'; // Servidor SMTP
     $mail->SMTPAuth = true;
     $mail->Username = getenv('EMAIL_USER'); // Configurado como secret no Vercel
-    $mail->Password = getenv('EMAIL_PASSWORD'); // Configurado como secret no Vercel
+    $mail->Password = getenv('EMAIL_PASS'); // Configurado como secret no Vercel
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
     $mail->setFrom(getenv('EMAIL_USER'), 'Contato do Site');
-    $mail->addAddress(getenv('EMAIL_DESTINATION')); // Destinatário final
+    $mail->addAddress(getenv('EMAIL_DESTINATARIO')); // Destinatário final
 
     $mail->isHTML(true);
     $mail->Subject = 'Nova mensagem de contato';
