@@ -1,36 +1,19 @@
-document.getElementById("contact-form").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+document.getElementById("contact-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    // Coleta os dados do formulário
-    const formData = new FormData(event.target);
-    
-    // Converte os dados do formulário para um objeto JSON
-    const formDataObj = {};
-    formData.forEach((value, key) => {
-        formDataObj[key] = value;
-    });
+    const formData = Object.fromEntries(new FormData(e.target));
 
     try {
-        // Envia os dados para a API do backend
-        const response = await fetch('/api/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formDataObj),
+        const response = await fetch("/api/send-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
         });
 
-        // Verifica se a resposta foi bem-sucedida
-        if (response.ok) {
-            const data = await response.json();
-            alert(data.message); // Exibe a mensagem de sucesso
-        } else {
-            // Caso o status não seja 2xx, exibe um erro mais informativo
-            const errorData = await response.json(); // Pega o JSON da resposta de erro
-            alert("Erro: " + errorData.error); // Exibe mensagem de erro
-        }
+        const result = await response.json();
+        alert(result.message);
     } catch (error) {
-        console.error('Erro ao enviar o formulário:', error);
-        alert('Erro ao enviar o formulário. Tente novamente.');
+        console.error("Erro:", error);
+        alert("Erro ao enviar o formulário.");
     }
 });
