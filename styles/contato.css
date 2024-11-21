@@ -147,6 +147,13 @@ form {
     font-weight: bold;
     margin-bottom: 5%;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit:hover {
+    border: 1px solid #FFFFFF;
+    background: #000000;
+    color: white;
 }
 
 .logo-top, .logo-down {
