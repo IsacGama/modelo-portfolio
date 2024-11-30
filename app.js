@@ -49,26 +49,54 @@ for (let i = 0; i < accServicos.length; i++) {
   });
 }
 
-const elements = document.querySelectorAll('.titulo, .card, .accordion, .minhafoto, .titulosobremim, .paragrafosobremim, .accordionServicos, .img-proposta, .titulo-proposta, .paragrafo-proposta, button-proposta'); 
+// Selecione todos os elementos que devem ser observados
+const elements = document.querySelectorAll('.titulo, .card, .accordion, .minhafoto, .titulosobremim, .paragrafosobremim, .accordionServicos, .img-proposta, .titulo-proposta, .paragrafo-proposta, .button-proposta, .img-projetos');
 
-// Criar uma instância do IntersectionObserver
+// Configuração do IntersectionObserver
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');  // Adiciona a classe de animação
-            entry.target.classList.remove('hidden'); // Remove a classe oculta
-            observer.unobserve(entry.target); // Parar de observar o elemento após a animação
+            // Adiciona a classe para ativar a animação e remove a classe oculta
+            entry.target.classList.add('visible');
+            entry.target.classList.remove('hidden');
+
+            // Desobserva o elemento para melhorar o desempenho
+            observer.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 0.1  // O elemento é considerado visível quando 50% dele estiver na tela
+    rootMargin: '0px 0px -10% 0px', // Antecipe o disparo antes de o elemento ficar 100% visível
+    threshold: 0.2                 // Reduza o ponto de interseção necessário
 });
 
-// Observa os elementos
-elements.forEach(element => {
-    element.classList.add('hidden');  // Inicialmente, os elementos estão invisíveis
-    observer.observe(element); // Observa cada elemento
+// Adicione a classe "hidden" inicialmente e observe os elementos
+elements.forEach(el => {
+    el.classList.add('hidden'); // Garante que eles começam ocultos
+    observer.observe(el);
 });
+
+document.querySelectorAll('img[data-src]').forEach(img => {
+  observer.observe(img);
+});
+
+// No callback, carregue as imagens quando elas forem visíveis
+const loadImage = (img) => {
+  img.src = img.dataset.src;
+  img.onload = () => img.classList.add('loaded'); // Animação opcional
+};
+
+entries.forEach(entry => {
+  if (entry.isIntersecting) {
+      const target = entry.target;
+      if (target.tagName === 'IMG' && target.dataset.src) {
+          loadImage(target);
+      }
+      target.classList.add('visible');
+      target.classList.remove('hidden');
+      observer.unobserve(target);
+  }
+});
+
 
 document.getElementById('toTopButton').addEventListener('click', function() {
   window.scrollTo({

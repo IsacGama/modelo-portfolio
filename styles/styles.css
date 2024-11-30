@@ -73,6 +73,7 @@ a {
     top: 0;
     background-color: black;
     width: 100%;
+    height: 15%;
 }
 
 .header-content {
@@ -87,22 +88,41 @@ main {
     flex-direction: column;
 }
 
-.logo-top {
+.div-logo {
+    display: flex;
+    flex: row;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.logo-top-img {
     width: auto;
-    height: 100px;
-    margin-left: 100%;
+    height: 25px;
+    background-color: #e2e2e2;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 0;
+}
+
+.logo-top-texto {
+    width: auto;
+    height: 30px;
+    margin-left: 0;
 }
 
 .logo-down {
     width: auto;
-    height: 100px;
-    margin-left: 100%;
+    height: 30px;
+    margin-left: 45%;
 }
 
 .button-logo {
     width: auto;
     height: 100px;
-    margin-top: 10%;
     background-color: transparent;
     outline: none;
     border: none;
@@ -121,6 +141,21 @@ main {
 .img-projeto {
     height: 50px;
     width: auto;
+}
+
+.div-img-projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.img-projetos {
+    width: 95%;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 5%;
 }
 
 .card {
@@ -372,6 +407,7 @@ main {
     display: flex;
     align-items: center;
     width: 100%;
+    height: 89px;
     justify-content: space-between;
   }
 
@@ -408,6 +444,7 @@ main {
 .hidden {
     opacity: 0;
     transform: translateY(20px);  /* Coloca o elemento um pouco abaixo */
+    will-change: opacity, transform;
 }
 
 /* Quando o elemento se torna visível, ele vai desvanecer e deslizar para a posição normal */
@@ -415,6 +452,7 @@ main {
     opacity: 1;
     transform: translateY(0px);  /* Volta à posição original */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    will-change: opacity, transform;
 }
 
 .titulo-portfolio {
