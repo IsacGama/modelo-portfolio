@@ -50,7 +50,7 @@ for (let i = 0; i < accServicos.length; i++) {
 }
 
 // Selecione todos os elementos que devem ser observados
-const elements = document.querySelectorAll('.titulo, .card, .accordion, .minhafoto, .titulosobremim, .paragrafosobremim, .accordionServicos, .img-proposta, .titulo-proposta, .paragrafo-proposta, .button-proposta, .img-projetos');
+const elements = document.querySelectorAll('.titulo, .card, .accordion, .minhafoto, .titulosobremim, .paragrafosobremim, .accordionServicos, .img-proposta, .titulo-proposta, .paragrafo-proposta, .button-proposta, .img-projetos, .sobre-o-projeto');
 
 // Configuração do IntersectionObserver
 const observer = new IntersectionObserver((entries, observer) => {
