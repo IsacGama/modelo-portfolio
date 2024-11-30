@@ -208,7 +208,7 @@ textarea {
 
 }
 
-.input-funcionarios, .input-investimento  {
+.input-funcionarios {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -217,7 +217,20 @@ textarea {
     margin: 0;
     padding: 0;
     margin-left: 8.5%;
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+}
+
+.input-investimento  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
     margin-bottom: 1%;
+    margin-left: 8.5%;
     margin-top: 2.5%;
 }
 
