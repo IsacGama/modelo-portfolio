@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 ::-webkit-scrollbar{
     width: 14px;
     border-radius: 100px;
@@ -31,10 +32,10 @@ body {
     height: auto;
     margin: 0;
     background-color:rgba(0, 0, 0, 0.99);
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
-h1 {
+.titulo {
     font-size: 4rem;
     text-align:center; 
     word-wrap: break-word; 
@@ -77,8 +78,8 @@ a {
 .header-content {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin-right: 5%;
+    gap: 10px;
+    margin-right: 10%;
 }
 
 main {
@@ -134,10 +135,6 @@ main {
     transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
 .metodologia {
     display: flex;
     flex-direction: column;
@@ -166,7 +163,6 @@ main {
     margin-top: 6%;
     margin-bottom: 3%;
     font-size: 3rem;
-    font-weight: bold;
 }
 
 .metodologias-dropdown {
@@ -183,7 +179,6 @@ main {
 
 .titulosobremim {
     font-size: 3rem;
-    font-weight: bold;
 }
 
 .paragrafosobremim {
@@ -235,7 +230,6 @@ main {
     text-align: left;
     color: white;
     font-size: 1rem;
-    font-weight: bold;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
     transition: bottom 0.5s ease;
@@ -266,7 +260,6 @@ main {
     outline: none;
     transition: 0.4s;
     font-size: 2rem;
-    font-weight: bold;
     margin-left: 2%;
     margin-right: 2%;    
   }
@@ -281,7 +274,6 @@ main {
     border: none;
     outline: none;
     font-size: 2rem;
-    font-weight: bold;
     margin-left: 2%;
     margin-right: 2%; 
     margin-top: 2%;
@@ -337,7 +329,6 @@ main {
 
   .titulo-proposta {
     font-size: 2.75rem;
-    font-weight: bold;
   }
 
   .paragrafo-proposta {
@@ -356,7 +347,6 @@ main {
     width: 250px;
     height: 50px;
     font-size: 1.25rem;
-    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }

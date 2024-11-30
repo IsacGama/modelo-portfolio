@@ -10,7 +10,7 @@
 
     <header class="header">
         <div class="logo-header">
-            <button class="button-logo"><img class="logo-top" src="assets/image-removebg-preview.png"></button>
+            <button class="button-logo" onclick="window.location.href='/index.html'"><img class="logo-top" src="assets/image-removebg-preview.png"></button>
         </div>
         <div class="header-content">
             <button class="button-sobre-mim" id="toSectionButton">Inicio</button>
@@ -20,15 +20,17 @@
     </header>
 
   <div class="container">
-    <h1>Briefing - Identidade Visual</h1>
-    <p>Olá! Suas respostas ajudarão a criar uma identidade forte e memorável. Tudo ok? Vamos lá!</p>
+    <div class="paragrafos-titulo">
+        <p class="titulo-briefing">Briefing - Identidade Visual</p>
+        <p class="paragrafo-briefing">Olá! Suas respostas ajudarão a criar uma identidade forte e memorável. Tudo ok? Vamos lá!</p>
+    </div>
     <form id="contact-form" action="https://formsubmit.co/noreply.nunesenterprise@gmail.com" method="POST">
         <label for="Nome">Qual é o seu nome?</label>
         <input 
             type="text" 
             id="Nome" 
             name="Nome" 
-            placeholder="Digite seu nome completo" 
+            placeholder="Digite aqui..." 
             required>
         
         <label for="Email">Qual é o seu melhor email?</label>
@@ -44,7 +46,7 @@
             type="text" 
             id="Logotipo" 
             name="Logotipo" 
-            placeholder="Digite o nome do logotipo" 
+            placeholder="Digite aqui..." 
             required>
         
         <label for="Numero de Telefone">Whatsapp com DDD?</label>
@@ -61,47 +63,252 @@
             id="Historia da Marca" 
             name="Historia da Marca" 
             rows="4" 
-            placeholder="Conte-nos como sua marca foi criada e se há alguma história especial por trás dela."></textarea>
+            placeholder="Digite aqui..."></textarea>
         
         <label for="Slogan da Empresa">Slogan da empresa (se houver):</label>
         <input 
             type="text" 
             id="Slogan da Empresa" 
             name="Slogan da Empresa" 
-            placeholder="Digite o slogan da sua empresa">
+            placeholder="Digite aqui...">
         
         <label for="Sobre Você">Diga-me um pouco sobre você:</label>
         <textarea 
             id="Sobre Você" 
             name="Sobre Você" 
             rows="4" 
-            placeholder="Fale sobre você, sua trajetória ou interesses pessoais."></textarea>
+            placeholder="Digite aqui..."></textarea>
         
         <label for="Relação Com a Empresa">Em primeiro lugar, é importante conhecer a sua relação com a empresa:</label>
         <textarea 
             id="Relação Com a Empresa" 
             name="Relação Com a Empresa" 
             rows="4" 
-            placeholder="Descreva sua relação com a empresa (ex: fundador, sócio, colaborador)."></textarea>
+            placeholder="Digite aqui..."></textarea>
         
         <label for="Mercado">Como você vê seu mercado? (Ex: competitivo, desafiador...)</label>
         <textarea 
             id="Mercado" 
             name="Mercado" 
             rows="4" 
-            placeholder="Compartilhe sua percepção sobre o mercado em que atua."></textarea>
+            placeholder="Digite aqui..."></textarea>
         
         <label for="significado-abertura">A abertura da sua marca tem algum significado?</label>
         <textarea 
             id="significado-abertura" 
             name="Significado da Abertura da Marca" 
             rows="4" 
-            placeholder="Explique se há algum significado especial para a abertura da sua marca."></textarea>
+            placeholder="Digite aqui..."></textarea>
 
         <input type="hidden" name="_autoresponse" value="Obrigado pelo contato! Entraremos em breve em contato com você.">
         <input type="hidden" name="_next" value="https://modelo-portfolio-psi.vercel.app/obrigado.html">
         <input type="hidden" name="_captcha" value="false">
+
+        <div class="funcionarios">
+            <p class="paragrafos-funcionarios">Quantos funcionários sua empresa possui atualmente?</p> 
+            <div class="input-funcionarios"> 
+                <div class="div-input-funcionarios">
+                    <input class="funcionarios-radio" type="radio" id="liberal" name="quantidade-funcionarios" value="Liberal">
+                    <label class="label-funcionarios" for="liberal">Profissional liberal</label><br>
+                </div>
+                <div class="div-input-funcionarios">
+                    <input class="funcionarios-radio" type="radio" id="micro" name="quantidade-funcionarios" value="Micro">
+                    <label class="label-funcionarios" for="micro">Micro (2-10 funcionários)</label><br>
+                </div>                
+                <div class="div-input-funcionarios">
+                    <input class="funcionarios-radio" type="radio" id="media" name="quantidade-funcionarios" value="Media">
+                    <label class="label-funcionarios" for="media">Média (50-100 funcionários)</label>
+                </div>
+                <div class="div-input-funcionarios">
+                    <input class="funcionarios-radio" type="radio" id="grande" name="quantidade-funcionarios" value="Grande">
+                    <label class="label-funcionarios" for="grande">Grande (mais de 100 funcionários)</label>
+                </div>
+            </div>
+        </div>
+
+        <label for="Segmento da empresa">Qual é o segmento da sua empresa?</label>
+        <input 
+            type="text" 
+            id="Segmento da empresa" 
+            name="Segmento da empresa" 
+            placeholder="Digite aqui...">
         
+
+        <label for="Tempo de mercado">Há quanto tempo sua marca está no mercado?</label>
+        <input 
+            type="text" 
+            id="Tempo de mercado" 
+            name="Tempo de mercado" 
+            placeholder="Digite aqui...">
+
+        <label for="Produtos oferecidos pela empresa">Quais produtos ou serviços sua empresa oferece?</label>
+        <input 
+            type="text" 
+            id="Produtos oferecidos pela empresa" 
+            name="Produtos oferecidos pela empresa" 
+            placeholder="Digite aqui...">
+
+
+        <div class="identidade-visual">
+            <p class="paragrafos-identidade-visual">Marque os itens adicionais que você deseja na sua identidade visual</p> 
+            <div class="input-identidade-visual"> 
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="cartao-visitas" name="identidade-visual" value="cartao-visitas">
+                    <label class="label-identidade-visual" for="cartao-visitas">Cartão de visitas</label><br>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="cartao-visitas-digital" name="identidade-visual" value="cartao-visitas-digital">
+                    <label class="label-identidade-visual" for="cartao-visitas-digital">Cartão de visitas digital</label><br>
+                </div>                
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="template-instagram" name="identidade-visual" value="template-instagram">
+                    <label class="label-identidade-visual" for="template-instagram">Template de post para Instagram</label>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="uniforme" name="identidade-visual" value="uniforme">
+                    <label class="label-identidade-visual" for="uniforme">Uniforme</label>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="capa-facebook" name="identidade-visual" value="capa-facebook">
+                    <label class="label-identidade-visual" for="capa-facebook">Capa para Facebook</label><br>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="assinatura-email" name="identidade-visual" value="assinatura-email">
+                    <label class="label-identidade-visual" for="assinatura-email">Assinatura de E-mail</label><br>
+                </div>                
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="papel-timbrado" name="identidade-visual" value="papel-timbrado">
+                    <label class="label-identidade-visual" for="papel-timbrado">Papel Timbrado</label>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="pasta-a4" name="identidade-visual" value="pasta-a4">
+                    <label class="label-identidade-visual" for="pasta-a4">Pasta A4</label>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="cracha" name="identidade-visual" value="cracha">
+                    <label class="label-identidade-visual" for="cracha">Crachá</label><br>
+                </div>                
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="adesivo" name="identidade-visual" value="adesivo">
+                    <label class="label-identidade-visual" for="adesivo">Adesivo</label>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="sacola" name="identidade-visual" value="sacola">
+                    <label class="label-identidade-visual" for="sacola">Sacola</label>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="envelope" name="identidade-visual" value="envelope">
+                    <label class="label-identidade-visual" for="envelope">Envelope</label><br>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="brindes" name="identidade-visual" value="brindes">
+                    <label class="label-identidade-visual" for="brindes">Brindes (Ex: Lápis, canecas, chaveiros)</label><br>
+                </div>                
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="nenhum" name="identidade-visual" value="nenhum">
+                    <label class="label-identidade-visual" for="nenhum">Nenhum</label>
+                </div>
+                <div class="div-input-identidade-visual">
+                    <input class="identidade-visual-radio" type="checkbox" id="outro" name="identidade-visual" value="outro">
+                    <label class="label-identidade-visual" for="outro">Outro</label>
+                </div>
+            </div>            
+        </div>
+
+        <div class="servico-adicional">
+            <p class="paragrafos-servico-adicional">Você deseja algum serviço adicional para este projeto?</p> 
+            <div class="input-servico-adicional"> 
+                <div class="div-input-servico-adicional">
+                    <input class="servico-adicional-radio" type="checkbox" id="naming" name="servico-adicional" value="naming">
+                    <label class="label-servico-adicional" for="naming">Naming</label><br>
+                </div>
+                <div class="div-input-servico-adicional">
+                    <input class="servico-adicional-radio" type="checkbox" id="motion" name="servico-adicional" value="motion">
+                    <label class="label-servico-adicional" for="motion">Motion</label><br>
+                </div>
+                <div class="div-input-servico-adicional">
+                    <input class="servico-adicional-radio" type="checkbox" id="design-3d" name="servico-adicional" value="design-3d">
+                    <label class="label-servico-adicional" for="design-3d">3D</label>
+                </div>
+                <div class="div-input-servico-adicional">
+                    <input class="servico-adicional-radio" type="checkbox" id="ilustracao" name="servico-adicional" value="ilustracao">
+                    <label class="label-servico-adicional" for="ilustracao">Ilustração</label>
+                </div>
+                <div class="div-input-servico-adicional">
+                    <input class="servico-adicional-radio" type="checkbox" id="outro-servico" name="servico-adicional" value="outro">
+                    <label class="label-servico-adicional" for="outro-servico">Outro</label><br>
+                </div>
+                <div class="div-input-servico-adicional">
+                    <input class="servico-adicional-radio" type="checkbox" id="nenhum-servico" name="servico-adicional" value="nenhum">
+                    <label class="label-servico-adicional" for="nenhum-servico">Nenhum</label><br>
+                </div>                              
+            </div>            
+        </div>
+
+        <div class="origem">
+            <p class="paragrafos-origem">Como você nos encontrou?</p> 
+            <div class="input-origem"> 
+                <div class="div-input-origem">
+                    <input class="origem-radio" type="checkbox" id="google" name="origem" value="google">
+                    <label class="label-origem" for="google">Google</label><br>
+                </div>
+                <div class="div-input-origem">
+                    <input class="origem-radio" type="checkbox" id="instagram" name="origem" value="instagram">
+                    <label class="label-origem" for="instagram">Instagram</label><br>
+                </div>
+                <div class="div-input-origem">
+                    <input class="origem-radio" type="checkbox" id="youtube" name="origem" value="youtube">
+                    <label class="label-origem" for="youtube">Youtube</label>
+                </div>
+                <div class="div-input-origem">
+                    <input class="origem-radio" type="checkbox" id="linkedin" name="origem" value="linkedin">
+                    <label class="label-origem" for="linkedin">Linkedin</label>
+                </div>
+                <div class="div-input-origem">
+                    <input class="origem-radio" type="checkbox" id="behance" name="origem" value="behance">
+                    <label class="label-origem" for="behance">Behance</label><br>
+                </div>
+                <div class="div-input-origem">
+                    <input class="origem-radio" type="checkbox" id="indicacao" name="origem" value="indicacao">
+                    <label class="label-origem" for="indicacao">Indicação</label><br>
+                </div>
+                <div class="div-input-origem">
+                    <input class="origem-radio" type="checkbox" id="outro-origem" name="origem" value="outro">
+                    <label class="label-origem" for="outro-origem">Outro</label><br>
+                </div>                                              
+            </div>            
+        </div>    
+        
+        <div class="investimento">
+            <p class="paragrafos-investimento">Quantos funcionários sua empresa possui atualmente?</p> 
+            <div class="input-investimento"> 
+                <div class="div-input-investimento">
+                    <input class="investimento-radio" type="radio" id="investimento-7-10mil" name="investimento" value="7-10mil">
+                    <label class="label-investimento" for="investimento-7-10mil">De 7 a 10 Mil reais</label><br>
+                </div>
+                <div class="div-input-investimento">
+                    <input class="investimento-radio" type="radio" id="investimento-10-15mil" name="investimento" value="10-15mil">
+                    <label class="label-investimento" for="investimento-10-15mil">De 10 a 15 Mil reais</label><br>
+                </div>                
+                <div class="div-input-investimento">
+                    <input class="investimento-radio" type="radio" id="investimento-15-20mil" name="investimento" value="15-20mil">
+                    <label class="label-investimento" for="investimento-15-20mil">De 15 a 20 Mil reais</label>
+                </div>
+                <div class="div-input-investimento">
+                    <input class="investimento-radio" type="radio" id="investimento-mais-20mil" name="investimento" value="mais-20mil">
+                    <label class="label-investimento" for="investimento-mais-20mil">+20 Mil reais</label>
+                </div>
+            </div>            
+        </div>
+
+        <label for="outras-informacoes">Ainda tem algo a dizer? Fique a vontade para contribuir com outras informações.</label>
+        <input 
+            type="text" 
+            id="outras-informacoes" 
+            name="outras-informacoes" 
+            placeholder="Digite aqui..." 
+            required>
+
         <button class="submit" type="submit">Enviar</button>
     </form>
        

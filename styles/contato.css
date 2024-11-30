@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
 ::-webkit-scrollbar{
     width: 14px;
     border-radius: 100px;
@@ -31,65 +33,200 @@ body {
     height: auto;
     margin: 0;
     background-color:rgba(0, 0, 0, 0.99);
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     
 }
 
 .link-header, .button-sobre-mim {
-    font-size: 1.2rem;
+    font-size: 1em;
 }
 
 .container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-h1 {
+.paragrafos-titulo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-left: 8.5%;
+    justify-items: left;
+}
+
+.titulo-briefing {
     font-size: 3.5rem;
-    text-align:center; 
-    margin-top: 10%;
-    margin-right: 35%;
-}
-
-p {
-    margin-right: 27.5%;
-    font-size: 1.25rem;
-    color: darkgrey;
-
-}
-
-label {
-    margin-left:5.8%;
-    font-size: 1.25rem;
-    color: darkgrey;
+    text-align:left; 
+    color: white;
+    margin-top: 16%;
     margin-bottom: 1%;
 }
 
+.paragrafo-briefing {
+    font-size: 1em;
+    color: white;
+    margin-bottom: 4%;
+}
+
+label {
+    margin-left: 8.5%;
+    font-size: 1em;
+    color: #e0e0e0;
+    margin-bottom: 2%;
+}
+
 input, textarea {
-    width: 60%;
-    margin-left: 5.8%;
+    margin-left: 8.5%;
     height: 60px;
-    width: 80%;
+    width: 85%;
     border-radius: 8px;
     border: none;
     outline: none;
-    font-size: 1.25rem;
     margin-bottom: 3%;
     resize: none;
     padding-left: 10px;
+    background-color: #20201f;
+    color: #e0e0e0;
+    font-size: 1em;
 }
 
 textarea {
     height: 150px;
     padding-top: 10px;
+    font-size: 1.25em;
 }
 
-::placeholder { 
-    color: #888; 
-    font-style: italic;
-    font-size: 1.25rem;
+::placeholder  { 
+    color: #e0e0e0; 
+}
+
+.funcionarios, .investimento{
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragrafos-funcionarios, .paragrafos-identidade-visual, .paragrafos-servico-adicional, .paragrafos-origem, .paragrafos-investimento{
+    margin-left: 8.5%;
+    color: #e0e0e0;
+}
+
+.funcionarios-radio, .investimento-radio {
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    appearance: none; /* Remove o estilo padrão */
+    border-radius: 50%; /* Botão circular */
+    background-color: #20201f; /* Fundo padrão */
+    border: none;
+    outline: none;
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+/* Círculo interno para estado marcado */
+.funcionarios-radio::before, .investimento-radio::before {
+    content: ''; /* Adiciona o círculo interno */
+    width: 20px; /* Tamanho fixo do círculo interno */
+    height: 20px;
+    background-color: #fff; /* Cor do círculo interno */
+    border-radius: 50%; /* Forma circular */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o círculo */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease-in-out; /* Transição suave de opacidade */
+}
+
+/* Quando o botão está marcado */
+.funcionarios-radio:checked::before, .investimento-radio:checked::before {
+    opacity: 1; /* Torna o círculo interno visível */
+}
+
+.identidade-visual-radio, .servico-adicional-radio, .origem-radio {
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    appearance: none; /* Remove o estilo padrão */
+    border-radius: 50%; /* Forma circular */
+    background-color: #20201f; /* Fundo padrão */
+    border: none;
+    outline: none;
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+/* Círculo interno para estado marcado */
+.identidade-visual-radio::before, .servico-adicional-radio::before, .origem-radio::before {
+    content: ''; /* Adiciona o círculo interno */
+    width: 20px; /* Tamanho fixo do círculo interno */
+    height: 20px;
+    background-color: #fff; /* Cor do círculo interno */
+    border-radius: 50%; /* Forma circular */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o círculo */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease-in-out; /* Transição suave de opacidade */
+}
+
+/* Quando o botão está marcado */
+.identidade-visual-radio:checked::before, .servico-adicional-radio:checked::before, .origem-radio:checked::before {
+    opacity: 1; /* Torna o círculo interno visível */
+}
+
+
+.div-input-funcionarios, .div-input-identidade-visual, .div-input-servico-adicional, .div-input-origem, .div-input-investimento {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div-input-identidade-visual, .div-input-servico-adicional, .div-input-origem, .div-input-investimento {
+    margin-bottom: 3.5%;
+}
+
+
+.input-identidade-visual, .input-servico-adicional, .input-origem {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-left: 8.5%;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
+
+}
+
+.input-funcionarios, .input-investimento  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 8.5%;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
+}
+
+.label-funcionarios, .label-identidade-visual, .label-origem, .label-servico-adicional, .label-investimento {
+    text-align:left;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 50px;
+    
 }
 
 a {
@@ -98,7 +235,7 @@ a {
 }
 
 .link-header, .button-sobre-mim {
-    font-size: 1.2rem;
+    font-size: 1em;
 }
 
 .button-sobre-mim {
@@ -108,6 +245,7 @@ a {
     cursor: pointer;
     color: white;
     width: 58px;
+    font-weight:bold;
 }
 
 .header {
@@ -124,8 +262,8 @@ a {
 .header-content {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin-right: 5%;
+    gap: 10px;
+    margin-right: 10%;
 }
 
 main {
@@ -147,8 +285,8 @@ form {
     width: 133px;
     height: 60px;
     color: #262626;
-    margin-left: 5.8%;
-    font-size: 1.25rem;
+    margin-left: 8.5%;
+    font-size: 1em;
     font-weight: bold;
     margin-bottom: 5%;
     cursor: pointer;
@@ -190,7 +328,7 @@ form {
     gap: 5px;
     align-items: center;
     margin-right: 5%;
-    font-size: 1.25rem;
+    font-size: 1em;
   }
 
   .links {
@@ -208,10 +346,6 @@ form {
     outline: none;
     border: none;
     cursor: pointer;
-  }
-
-  p, h1, h2, label {
-    color: white;
   }
 
 /* Inicialmente os elementos são invisíveis e posicionados um pouco abaixo */

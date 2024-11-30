@@ -106,3 +106,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+
+let isScrolling = false;
+let scrollVelocity = 0;
+
+document.addEventListener('wheel', (e) => {
+    e.preventDefault(); // Evita a rolagem padrão
+    scrollVelocity += e.deltaY * 0.45; // Ajusta a sensibilidade do movimento
+    isScrolling = true;
+}, { passive: false });
+
+function smoothScroll() {
+    if (isScrolling || Math.abs(scrollVelocity) > 0.1) {
+        window.scrollBy(0, scrollVelocity); // Rola a página com base na velocidade
+        scrollVelocity *= 0.6; // Reduz gradualmente a velocidade (simula desaceleração)
+
+        if (Math.abs(scrollVelocity) < 0.1) {
+            scrollVelocity = 0; // Para a rolagem quando a velocidade é insignificante
+            isScrolling = false;
+        }
+    }
+    requestAnimationFrame(smoothScroll); // Continua atualizando a animação
+}
+
+// Inicia a função de atualização contínua
+smoothScroll();
