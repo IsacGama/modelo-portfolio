@@ -460,17 +460,17 @@ main {
     color: white;
   }
 
-/* Inicialmente os elementos são invisíveis e posicionados um pouco abaixo */
+
 .hidden {
     opacity: 0;
-    transform: translateY(20px);  /* Coloca o elemento um pouco abaixo */
+    transform: translateY(20px);
     will-change: opacity, transform;
 }
 
-/* Quando o elemento se torna visível, ele vai desvanecer e deslizar para a posição normal */
+
 .visible {
     opacity: 1;
-    transform: translateY(0px);  /* Volta à posição original */
+    transform: translateY(0px);  
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     will-change: opacity, transform;
 }
