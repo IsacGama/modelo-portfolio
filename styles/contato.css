@@ -146,32 +146,29 @@ textarea {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    appearance: none; /* Remove o estilo padrão */
-    border-radius: 50%; /* Botão circular */
-    background-color: #20201f; /* Fundo padrão */
+    appearance: none; 
+    border-radius: 50%;
+    background-color: #20201f;
     border: none;
     outline: none;
-    position: relative; /* Necessário para o pseudo-elemento */
+    position: relative;
 }
 
-/* Círculo interno para estado marcado */
 .funcionarios-radio::before, .investimento-radio::before {
-    content: ''; /* Adiciona o círculo interno */
-    width: 20px; /* Tamanho fixo do círculo interno */
+    content: ''; 
+    width: 20px; 
     height: 20px;
-    background-color: #fff; /* Cor do círculo interno */
-    border-radius: 50%; /* Forma circular */
+    background-color: #fff;
+    border-radius: 50%; 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o círculo */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.3s ease-in-out; /* Transição suave de opacidade */
+    transform: translate(-50%, -50%); 
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Quando o botão está marcado */
 .funcionarios-radio:checked::before, .investimento-radio:checked::before {
-    opacity: 1; /* Torna o círculo interno visível */
+    opacity: 1; /
 }
 
 .identidade-visual-radio, .servico-adicional-radio, .origem-radio {
@@ -182,32 +179,32 @@ textarea {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    appearance: none; /* Remove o estilo padrão */
-    border-radius: 50%; /* Forma circular */
-    background-color: #20201f; /* Fundo padrão */
+    appearance: none; 
+    border-radius: 50%;
+    background-color: #20201f;
     border: none;
     outline: none;
-    position: relative; /* Necessário para o pseudo-elemento */
+    position: relative;
 }
 
-/* Círculo interno para estado marcado */
+
 .identidade-visual-radio::before, .servico-adicional-radio::before, .origem-radio::before {
-    content: ''; /* Adiciona o círculo interno */
-    width: 20px; /* Tamanho fixo do círculo interno */
+    content: ''; 
+    width: 20px; 
     height: 20px;
-    background-color: #fff; /* Cor do círculo interno */
-    border-radius: 50%; /* Forma circular */
+    background-color: #fff;
+    border-radius: 50%; 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o círculo */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.3s ease-in-out; /* Transição suave de opacidade */
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Quando o botão está marcado */
+
 .identidade-visual-radio:checked::before, .servico-adicional-radio:checked::before, .origem-radio:checked::before {
-    opacity: 1; /* Torna o círculo interno visível */
+    opacity: 1; 
 }
 
 
@@ -393,15 +390,13 @@ form {
     cursor: pointer;
   }
 
-/* Inicialmente os elementos são invisíveis e posicionados um pouco abaixo */
 .hidden {
     opacity: 0;
-    transform: translateY(20px);  /* Coloca o elemento um pouco abaixo */
+    transform: translateY(20px); 
 }
 
-/* Quando o elemento se torna visível, ele vai desvanecer e deslizar para a posição normal */
 .visible {
     opacity: 1;
-    transform: translateY(0px);  /* Volta à posição original */
+    transform: translateY(0px);  
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
