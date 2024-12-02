@@ -52,6 +52,7 @@ a {
     cursor: pointer;
     color: white;
     width: 58px;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .header {
@@ -70,7 +71,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 
 main {
@@ -89,18 +90,10 @@ main {
 }
 
 .logo-top-img {
-    width: 35px;
+    width: 200px;
     height: auto;
     margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
     margin-right: 0;
-}
-
-.logo-top-texto {
-    width: auto;
-    height: 30px;
-    margin-left: 0;
 }
 
 .logo-down {
@@ -182,6 +175,7 @@ main {
 
   .titulo-proposta {
     font-size: 2.75rem;
+    color: #e2e2e2;
   }
 
   .paragrafo-proposta {

@@ -52,6 +52,7 @@ a {
     cursor: pointer;
     color: white;
     width: 58px;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .header {
@@ -70,7 +71,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 
 main {
@@ -124,18 +125,10 @@ main {
 }
 
 .logo-top-img {
-    width: 35px;
+    width: 200px;
     height: auto;
     margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
     margin-right: 0;
-}
-
-.logo-top-texto {
-    width: auto;
-    height: 30px;
-    margin-left: 0;
 }
 
 .logo-down {
@@ -182,7 +175,7 @@ main {
     align-items: center;
 }
 
-.line1, .line2, .line3 {
+.line1, .line2, .line3{
     display: flex;
     flex-direction: row;
     gap: 30px;
