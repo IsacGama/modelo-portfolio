@@ -363,14 +363,14 @@ form {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 89px;
+    height: 70px;
     justify-content: space-between;
     border-top: darkgray solid 1px;
   }
 
   .footer-content {
     display: flex;
-    gap: 5px;
+    gap: 30px;
     align-items: center;
     margin-right: 5%;
     font-size: 1em;
@@ -378,7 +378,7 @@ form {
 
   .links {
     display: flex;
-    gap: 10px;
+    gap: 30px;
   }
 
   .seta {
