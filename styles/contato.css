@@ -370,15 +370,15 @@ form {
 
   .footer-content {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     margin-right: 5%;
-    font-size: 1em;
+    font-size: 1.25em;
   }
 
   .links {
     display: flex;
-    gap: 30px;
+    gap: 20px;
   }
 
   .seta {

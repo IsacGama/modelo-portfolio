@@ -426,7 +426,7 @@ main {
 
   .footer-content {
     display: flex;
-    gap: 5px;
+    gap: 20px;
     align-items: center;
     margin-right: 5%;
     font-size: 1.25rem;
@@ -434,7 +434,7 @@ main {
 
   .links {
     display: flex;
-    gap: 10px;
+    gap: 20px;
   }
 
   .seta {
