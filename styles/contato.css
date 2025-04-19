@@ -361,3 +361,312 @@ form {
     transform: translateY(0px);  
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
+
+/* Media Queries for Contact Page */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .input-plataformas,
+    .input-tecnologias,
+    .input-banco-dados,
+    .input-servicos-adicionais {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .input-investimento {
+        gap: 30px;
+    }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (max-width: 1199px) {
+    .titulo-briefing {
+        font-size: 3rem;
+        margin-top: 12%;
+    }
+    
+    .input-plataformas,
+    .input-tecnologias,
+    .input-banco-dados,
+    .input-servicos-adicionais {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .input-investimento {
+        gap: 20px;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+    .header {
+        height: 10%;
+    }
+    
+    .logo-top-img {
+        width: 120px;
+    }
+    
+    .link-header, .button-sobre-mim {
+        font-size: 1rem;
+    }
+    
+    .titulo-briefing {
+        font-size: 2.5rem;
+        margin-top: 15%;
+    }
+    
+    .paragrafo-briefing {
+        font-size: 0.9rem;
+    }
+    
+    input, textarea {
+        height: 50px;
+        font-size: 0.9rem;
+    }
+    
+    textarea {
+        height: 120px;
+    }
+    
+    .input-plataformas,
+    .input-tecnologias,
+    .input-banco-dados,
+    .input-servicos-adicionais {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .input-investimento {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .submit {
+        width: 120px;
+        height: 50px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-content {
+        font-size: 1rem;
+    }
+}
+
+/* Small tablets and large phones (576px to 767px) */
+@media (max-width: 767px) {
+    .header {
+        height: 8%;
+    }
+    
+    .logo-top-img {
+        width: 100px;
+    }
+    
+    .header-content {
+        gap: 5px;
+        margin-right: 3%;
+    }
+    
+    .titulo-briefing {
+        font-size: 2rem;
+        margin-top: 18%;
+    }
+    
+    .paragrafo-briefing {
+        font-size: 0.8rem;
+    }
+    
+    label {
+        font-size: 0.9rem;
+    }
+    
+    input, textarea {
+        height: 45px;
+        font-size: 0.8rem;
+        width: 90%;
+    }
+    
+    textarea {
+        height: 100px;
+    }
+    
+    .input-plataformas,
+    .input-tecnologias,
+    .input-banco-dados,
+    .input-servicos-adicionais {
+        grid-template-columns: 1fr;
+    }
+    
+    .plataformas-radio, 
+    .tecnologias-radio, 
+    .banco-dados-radio, 
+    .servicos-adicionais-radio, 
+    .investimento-radio {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .label-plataformas, 
+    .label-tecnologias, 
+    .label-banco-dados, 
+    .label-servicos-adicionais, 
+    .label-investimento {
+        font-size: 0.9rem;
+        margin-right: 30px;
+    }
+    
+    .submit {
+        width: 110px;
+        height: 45px;
+        font-size: 0.8rem;
+    }
+    
+    .footer {
+        height: 60px;
+    }
+    
+    .logo-down {
+        height: 25px;
+        margin-left: 30px;
+    }
+    
+    .footer-content {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small phones (up to 575px) */
+@media (max-width: 575px) {
+    .header {
+        height: 7%;
+    }
+    
+    .logo-top-img {
+        width: 80px;
+        margin-left: 10px;
+    }
+    
+    .header-content {
+        gap: 3px;
+        margin-right: 2%;
+    }
+    
+    .link-header, .button-sobre-mim {
+        font-size: 0.8rem;
+    }
+    
+    .titulo-briefing {
+        font-size: 1.5rem;
+        margin-top: 22%;
+    }
+    
+    .paragrafo-briefing {
+        font-size: 0.7rem;
+    }
+    
+    label {
+        font-size: 0.8rem;
+        margin-left: 5%;
+    }
+    
+    input, textarea {
+        height: 40px;
+        font-size: 0.7rem;
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    textarea {
+        height: 80px;
+    }
+    
+    .paragrafos-plataformas, 
+    .paragrafos-tecnologias, 
+    .paragrafos-banco-dados, 
+    .paragrafos-servicos-adicionais, 
+    .paragrafos-investimento {
+        margin-left: 5%;
+        font-size: 0.9rem;
+    }
+    
+    .input-plataformas, 
+    .input-tecnologias, 
+    .input-banco-dados, 
+    .input-servicos-adicionais,
+    .input-investimento {
+        margin-left: 5%;
+    }
+    
+    .plataformas-radio, 
+    .tecnologias-radio, 
+    .banco-dados-radio, 
+    .servicos-adicionais-radio, 
+    .investimento-radio {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .label-plataformas, 
+    .label-tecnologias, 
+    .label-banco-dados, 
+    .label-servicos-adicionais, 
+    .label-investimento {
+        font-size: 0.8rem;
+        margin-right: 20px;
+    }
+    
+    .submit {
+        width: 100px;
+        height: 40px;
+        font-size: 0.7rem;
+        margin-left: 5%;
+    }
+    
+    .footer {
+        height: 50px;
+    }
+    
+    .logo-down {
+        height: 20px;
+        margin-left: 20px;
+    }
+    
+    .footer-content {
+        font-size: 0.8rem;
+        gap: 10px;
+    }
+    
+    .links {
+        gap: 10px;
+    }
+    
+    .seta {
+        width: 12px;
+    }
+}
+
+/* Very small phones (up to 400px) */
+@media (max-width: 400px) {
+    .header-content {
+        gap: 2px;
+    }
+    
+    .link-header, .button-sobre-mim {
+        font-size: 0.7rem;
+    }
+    
+    .titulo-briefing {
+        font-size: 1.3rem;
+        margin-top: 25%;
+    }
+    
+    .footer-content {
+        font-size: 0.7rem;
+    }
+}

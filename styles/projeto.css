@@ -296,3 +296,269 @@ main {
 .lista-funcionalidades li::marker {
     color: #e2e2e2;
 }
+
+/* Media Queries */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .img-projetos {
+        width: 80%;
+    }
+    
+    .sobre-o-projeto {
+        width: 80%;
+    }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (max-width: 1199px) {
+    .titulo-projeto {
+        font-size: 2.5rem;
+    }
+    
+    .subtitulo-projeto, 
+    .subtitulo-info-tecnicas {
+        font-size: 1.8rem;
+    }
+    
+    .proposta {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .texto-proposta {
+        width: 80%;
+        margin-left: 10%;
+        align-items: center;
+    }
+    
+    .paragrafo-proposta {
+        width: 100%;
+    }
+    
+    .img-proposta {
+        margin-left: 0;
+        margin-top: 5%;
+        width: 150px;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+    .header {
+        height: 12%;
+    }
+    
+    .logo-top-img {
+        width: 120px;
+        margin-left: 30px;
+    }
+    
+    .link-header, .button-sobre-mim {
+        font-size: 1rem;
+    }
+    
+    .titulo-projeto {
+        font-size: 2.2rem;
+    }
+    
+    .subtitulo-projeto, 
+    .subtitulo-info-tecnicas {
+        font-size: 1.6rem;
+    }
+    
+    .paragrafo-projeto,
+    .lista-funcionalidades li {
+        font-size: 1.1rem;
+    }
+    
+    .div-img-projetos {
+        margin-top: 15%;
+    }
+    
+    .img-projetos {
+        width: 90%;
+    }
+    
+    .proposta {
+        margin-top: 8%;
+    }
+}
+
+/* Small tablets and large phones (576px to 767px) */
+@media (max-width: 767px) {
+    .header {
+        height: 10%;
+        padding: 10px 0;
+    }
+    
+    .logo-top-img {
+        width: 100px;
+        margin-left: 20px;
+    }
+    
+    .header-content {
+        margin-right: 3%;
+        gap: 8px;
+    }
+    
+    .link-header, .button-sobre-mim {
+        font-size: 0.9rem;
+    }
+    
+    .titulo-projeto {
+        font-size: 2rem;
+    }
+    
+    .subtitulo-projeto, 
+    .subtitulo-info-tecnicas {
+        font-size: 1.4rem;
+    }
+    
+    .paragrafo-projeto,
+    .lista-funcionalidades li,
+    .paragrafo-proposta {
+        font-size: 1rem;
+    }
+    
+    .div-img-projetos {
+        margin-top: 20%;
+    }
+    
+    .img-projetos {
+        width: 95%;
+    }
+    
+    .button-proposta {
+        width: 200px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .footer-content {
+        font-size: 1rem;
+    }
+    
+    .logo-down {
+        height: 25px;
+        margin-left: 30px;
+    }
+    
+    .lista-funcionalidades {
+        margin-left: 4%;
+    }
+}
+
+/* Small phones (up to 575px) */
+@media (max-width: 575px) {
+    .header {
+        height: 8%;
+        padding: 8px 0;
+    }
+    
+    .logo-top-img {
+        width: 80px;
+        margin-left: 10px;
+    }
+    
+    .header-content {
+        gap: 5px;
+        margin-right: 2%;
+    }
+    
+    .link-header, .button-sobre-mim {
+        font-size: 0.8rem;
+    }
+    
+    .titulo-projeto {
+        font-size: 1.8rem;
+    }
+    
+    .subtitulo-projeto, 
+    .subtitulo-info-tecnicas {
+        font-size: 1.3rem;
+    }
+    
+    .paragrafo-projeto,
+    .lista-funcionalidades li {
+        font-size: 0.9rem;
+    }
+    
+    .div-img-projetos {
+        margin-top: 25%;
+    }
+    
+    .footer {
+        height: 70px;
+    }
+    
+    .footer-content {
+        gap: 10px;
+        margin-right: 3%;
+    }
+    
+    .links {
+        gap: 10px;
+    }
+    
+    .logo-down {
+        height: 20px;
+        margin-left: 20px;
+    }
+    
+    .seta {
+        width: 12px;
+    }
+    
+    .lista-funcionalidades {
+        margin-left: 2%;
+    }
+    
+    .proposta {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+
+/* Very small phones (up to 400px) */
+@media (max-width: 400px) {
+    .header-content {
+        gap: 3px;
+    }
+    
+    .link-header, .button-sobre-mim {
+        font-size: 0.7rem;
+    }
+    
+    .titulo-projeto {
+        font-size: 1.5rem;
+    }
+    
+    .subtitulo-projeto, 
+    .subtitulo-info-tecnicas {
+        font-size: 1.1rem;
+    }
+    
+    .paragrafo-projeto,
+    .lista-funcionalidades li {
+        font-size: 0.8rem;
+    }
+    
+    .div-img-projetos {
+        margin-top: 30%;
+    }
+    
+    .footer-content {
+        font-size: 0.8rem;
+    }
+    
+    .lista-funcionalidades {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .sobre-o-projeto {
+        width: 95%;
+    }
+}
