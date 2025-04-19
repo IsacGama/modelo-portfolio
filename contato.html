@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta autocomplete="off" name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing - Identidade Visual</title>
+  <title>Briefing - Desenvolvimento de Software</title>
   <link rel="stylesheet" href="styles/contato.css">
-  <link rel="icon" href="assets/logo/page.png" type="image/x-icon">
+  <link rel="icon" href="assets/logo/icon.png" type="image/x-icon">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
         <div class="logo-header">
             <button class="button-logo" onclick="window.location.href='/index.html'">
                 <div class="div-logo">
-                    <img class="logo-top-img" src="assets/logo/imagem.png">
+                    <img class="logo-top-img" src="assets/logo/texto.png">
                 </div>
             </button>
         </div>
@@ -26,10 +26,10 @@
 
   <div class="container">
     <div class="paragrafos-titulo">
-        <p class="titulo-briefing">Briefing - Identidade Visual</p>
-        <p class="paragrafo-briefing">Olá! Suas respostas ajudarão a criar uma identidade forte e memorável. Tudo ok? Vamos lá!</p>
+        <p class="titulo-briefing">Briefing - Desenvolvimento de Software</p>
+        <p class="paragrafo-briefing">Olá! Suas respostas nos ajudarão a entender melhor seu projeto de software. Vamos começar?</p>
     </div>
-    <form id="contact-form" action="https://formsubmit.co/noreply.nunesenterprise@gmail.com" method="POST">
+    <form id="contact-form" action="https://formsubmit.co/diasgamaisac0@gmail.com" method="POST">
         <label for="Nome">Qual é o seu nome?</label>
         <input 
             type="text" 
@@ -46,11 +46,11 @@
             placeholder="Digite seu email (exemplo@dominio.com)" 
             required>
         
-        <label for="Logotipo">Qual é o nome do seu logotipo?</label>
+        <label for="Empresa">Nome da sua empresa ou projeto:</label>
         <input 
             type="text" 
-            id="Logotipo" 
-            autocomplete="off" name="Logotipo" 
+            id="Empresa" 
+            autocomplete="off" name="Empresa" 
             placeholder="Digite aqui..." 
             required>
         
@@ -63,256 +63,233 @@
             placeholder="(XX) XXXXX-XXXX" 
             title="Digite o número no formato (XX) XXXXX-XXXX">
         
-        <label for="Historia da Marca">Como surgiu a sua marca? Há alguma história especial por trás dela?</label>
+        <label for="Sobre o Projeto">Nos conte sobre seu projeto de software:</label>
         <textarea 
-            id="Historia da Marca" 
-            autocomplete="off" name="Historia da Marca" 
+            id="Sobre o Projeto" 
+            autocomplete="off" name="Sobre o Projeto" 
             rows="4" 
-            placeholder="Digite aqui..."></textarea>
+            placeholder="Qual problema seu software resolve? Quem são os usuários?"></textarea>
         
-        <label for="Slogan da Empresa">Slogan da empresa (se houver):</label>
+        <label for="Tipo de Software">Que tipo de software você precisa?</label>
         <input 
             type="text" 
-            id="Slogan da Empresa" 
-            autocomplete="off" name="Slogan da Empresa" 
-            placeholder="Digite aqui...">
+            id="Tipo de Software" 
+            autocomplete="off" name="Tipo de Software" 
+            placeholder="Ex: Aplicativo móvel, sistema web, SaaS, etc.">
         
-        <label for="Sobre Você">Diga-me um pouco sobre você:</label>
-        <textarea 
-            id="Sobre Você" 
-            autocomplete="off" name="Sobre Você" 
-            rows="4" 
-            placeholder="Digite aqui..."></textarea>
-        
-        <label for="Relação Com a Empresa">Em primeiro lugar, é importante conhecer a sua relação com a empresa:</label>
-        <textarea 
-            id="Relação Com a Empresa" 
-            autocomplete="off" name="Relação Com a Empresa" 
-            rows="4" 
-            placeholder="Digite aqui..."></textarea>
-        
-        <label for="Mercado">Como você vê seu mercado? (Ex: competitivo, desafiador...)</label>
-        <textarea 
-            id="Mercado" 
-            autocomplete="off" name="Mercado" 
-            rows="4" 
-            placeholder="Digite aqui..."></textarea>
-        
-        <label for="significado-abertura">A abertura da sua marca tem algum significado?</label>
-        <textarea 
-            id="significado-abertura" 
-            autocomplete="off" name="Significado da Abertura da Marca" 
-            rows="4" 
-            placeholder="Digite aqui..."></textarea>
-
-        <input type="hidden" autocomplete="off" name="_autoresponse" value="Obrigado pelo contato! Entraremos em breve em contato com você.">
-        <input type="hidden" autocomplete="off" name="_next" value="https://modelo-portfolio-psi.vercel.app/obrigado.html">
-        <input type="hidden" autocomplete="off" name="_captcha" value="false">
-
-        <div class="funcionarios">
-            <p class="paragrafos-funcionarios">Quantos funcionários sua empresa possui atualmente?</p> 
-            <div class="input-funcionarios"> 
-                <div class="div-input-funcionarios">
-                    <input class="funcionarios-radio" type="radio" id="liberal" autocomplete="off" name="quantidade-funcionarios" value="Liberal">
-                    <label class="label-funcionarios" for="liberal">Profissional liberal</label><br>
+        <div class="plataformas">
+            <p class="paragrafos-plataformas">Para quais plataformas seu software será desenvolvido?</p> 
+            <div class="input-plataformas"> 
+                <div class="div-input-plataformas">
+                    <input class="plataformas-radio" type="checkbox" id="web" autocomplete="off" name="plataformas[]" value="web">
+                    <label class="label-plataformas" for="web">Web</label><br>
                 </div>
-                <div class="div-input-funcionarios">
-                    <input class="funcionarios-radio" type="radio" id="micro" autocomplete="off" name="quantidade-funcionarios" value="Micro">
-                    <label class="label-funcionarios" for="micro">Micro (2-10 funcionários)</label><br>
+                <div class="div-input-plataformas">
+                    <input class="plataformas-radio" type="checkbox" id="ios" autocomplete="off" name="plataformas[]" value="ios">
+                    <label class="label-plataformas" for="ios">iOS</label><br>
                 </div>                
-                <div class="div-input-funcionarios">
-                    <input class="funcionarios-radio" type="radio" id="media" autocomplete="off" name="quantidade-funcionarios" value="Media">
-                    <label class="label-funcionarios" for="media">Média (50-100 funcionários)</label>
+                <div class="div-input-plataformas">
+                    <input class="plataformas-radio" type="checkbox" id="android" autocomplete="off" name="plataformas[]" value="android">
+                    <label class="label-plataformas" for="android">Android</label>
                 </div>
-                <div class="div-input-funcionarios">
-                    <input class="funcionarios-radio" type="radio" id="grande" autocomplete="off" name="quantidade-funcionarios" value="Grande">
-                    <label class="label-funcionarios" for="grande">Grande (mais de 100 funcionários)</label>
+                <div class="div-input-plataformas">
+                    <input class="plataformas-radio" type="checkbox" id="windows" autocomplete="off" name="plataformas[]" value="windows">
+                    <label class="label-plataformas" for="windows">Windows</label>
                 </div>
-            </div>
-        </div>
-
-        <label for="Segmento da empresa">Qual é o segmento da sua empresa?</label>
-        <input 
-            type="text" 
-            id="Segmento da empresa" 
-            autocomplete="off" name="Segmento da empresa" 
-            placeholder="Digite aqui...">
-        
-
-        <label for="Tempo de mercado">Há quanto tempo sua marca está no mercado?</label>
-        <input 
-            type="text" 
-            id="Tempo de mercado" 
-            autocomplete="off" name="Tempo de mercado" 
-            placeholder="Digite aqui...">
-
-        <label for="Produtos oferecidos pela empresa">Quais produtos ou serviços sua empresa oferece?</label>
-        <input 
-            type="text" 
-            id="Produtos oferecidos pela empresa" 
-            autocomplete="off" name="Produtos oferecidos pela empresa" 
-            placeholder="Digite aqui...">
-
-
-        <div class="identidade-visual">
-            <p class="paragrafos-identidade-visual">Marque os itens adicionais que você deseja na sua identidade visual</p> 
-            <div class="input-identidade-visual"> 
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="cartao-visitas" autocomplete="off" name="identidade-visual[]" value="cartao-visitas">
-                    <label class="label-identidade-visual" for="cartao-visitas">Cartão de visitas</label><br>
+                <div class="div-input-plataformas">
+                    <input class="plataformas-radio" type="checkbox" id="macos" autocomplete="off" name="plataformas[]" value="macos">
+                    <label class="label-plataformas" for="macos">macOS</label><br>
                 </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="cartao-visitas-digital" autocomplete="off" name="identidade-visual[]" value="cartao-visitas-digital">
-                    <label class="label-identidade-visual" for="cartao-visitas-digital">Cartão de visitas digital</label><br>
-                </div>                
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="template-instagram" autocomplete="off" name="identidade-visual[]" value="template-instagram">
-                    <label class="label-identidade-visual" for="template-instagram">Template de post para Instagram</label>
+                <div class="div-input-plataformas">
+                    <input class="plataformas-radio" type="checkbox" id="linux" autocomplete="off" name="plataformas[]" value="linux">
+                    <label class="label-plataformas" for="linux">Linux</label><br>
                 </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="uniforme" autocomplete="off" name="identidade-visual[]" value="uniforme">
-                    <label class="label-identidade-visual" for="uniforme">Uniforme</label>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="capa-facebook" autocomplete="off" name="identidade-visual[]" value="capa-facebook">
-                    <label class="label-identidade-visual" for="capa-facebook">Capa para Facebook</label><br>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="assinatura-email" autocomplete="off" name="identidade-visual[]" value="assinatura-email">
-                    <label class="label-identidade-visual" for="assinatura-email">Assinatura de E-mail</label><br>
-                </div>                
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="papel-timbrado" autocomplete="off" name="identidade-visual[]" value="papel-timbrado">
-                    <label class="label-identidade-visual" for="papel-timbrado">Papel Timbrado</label>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="pasta-a4" autocomplete="off" name="identidade-visual[]" value="pasta-a4">
-                    <label class="label-identidade-visual" for="pasta-a4">Pasta A4</label>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="cracha" autocomplete="off" name="identidade-visual[]" value="cracha">
-                    <label class="label-identidade-visual" for="cracha">Crachá</label><br>
-                </div>                
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="adesivo" autocomplete="off" name="identidade-visual[]" value="adesivo">
-                    <label class="label-identidade-visual" for="adesivo">Adesivo</label>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="sacola" autocomplete="off" name="identidade-visual[]" value="sacola">
-                    <label class="label-identidade-visual" for="sacola">Sacola</label>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="envelope" autocomplete="off" name="identidade-visual[]" value="envelope">
-                    <label class="label-identidade-visual" for="envelope">Envelope</label><br>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="brindes" autocomplete="off" name="identidade-visual[]" value="brindes">
-                    <label class="label-identidade-visual" for="brindes">Brindes (Ex: Lápis, canecas, chaveiros)</label><br>
-                </div>                
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="nenhum" autocomplete="off" name="identidade-visual[]" value="nenhum">
-                    <label class="label-identidade-visual" for="nenhum">Nenhum</label>
-                </div>
-                <div class="div-input-identidade-visual">
-                    <input class="identidade-visual-radio" type="checkbox" id="outro" autocomplete="off" name="identidade-visual[]" value="outro">
-                    <label class="label-identidade-visual" for="outro">Outro</label>
-                </div>
-            </div>            
-        </div>
-
-        <div class="servico-adicional">
-            <p class="paragrafos-servico-adicional">Você deseja algum serviço adicional para este projeto?</p> 
-            <div class="input-servico-adicional"> 
-                <div class="div-input-servico-adicional">
-                    <input class="servico-adicional-radio" type="checkbox" id="naming" autocomplete="off" name="servico-adicional[]" value="naming">
-                    <label class="label-servico-adicional" for="naming">Naming</label><br>
-                </div>
-                <div class="div-input-servico-adicional">
-                    <input class="servico-adicional-radio" type="checkbox" id="motion" autocomplete="off" name="servico-adicional[]" value="motion">
-                    <label class="label-servico-adicional" for="motion">Motion</label><br>
-                </div>
-                <div class="div-input-servico-adicional">
-                    <input class="servico-adicional-radio" type="checkbox" id="design-3d" autocomplete="off" name="servico-adicional[]" value="design-3d">
-                    <label class="label-servico-adicional" for="design-3d">3D</label>
-                </div>
-                <div class="div-input-servico-adicional">
-                    <input class="servico-adicional-radio" type="checkbox" id="ilustracao" autocomplete="off" name="servico-adicional[]" value="ilustracao">
-                    <label class="label-servico-adicional" for="ilustracao">Ilustração</label>
-                </div>
-                <div class="div-input-servico-adicional">
-                    <input class="servico-adicional-radio" type="checkbox" id="outro-servico" autocomplete="off" name="servico-adicional[]" value="outro">
-                    <label class="label-servico-adicional" for="outro-servico">Outro</label><br>
-                </div>
-                <div class="div-input-servico-adicional">
-                    <input class="servico-adicional-radio" type="checkbox" id="nenhum-servico" autocomplete="off" name="servico-adicional[]" value="nenhum">
-                    <label class="label-servico-adicional" for="nenhum-servico">Nenhum</label><br>
-                </div>                              
-            </div>            
-        </div>
-
-        <div class="origem">
-            <p class="paragrafos-origem">Como você nos encontrou?</p> 
-            <div class="input-origem"> 
-                <div class="div-input-origem">
-                    <input class="origem-radio" type="checkbox" id="google" autocomplete="off" name="origem[]" value="google">
-                    <label class="label-origem" for="google">Google</label><br>
-                </div>
-                <div class="div-input-origem">
-                    <input class="origem-radio" type="checkbox" id="instagram" autocomplete="off" name="origem[]" value="instagram">
-                    <label class="label-origem" for="instagram">Instagram</label><br>
-                </div>
-                <div class="div-input-origem">
-                    <input class="origem-radio" type="checkbox" id="youtube" autocomplete="off" name="origem[]" value="youtube">
-                    <label class="label-origem" for="youtube">Youtube</label>
-                </div>
-                <div class="div-input-origem">
-                    <input class="origem-radio" type="checkbox" id="linkedin" autocomplete="off" name="origem[]" value="linkedin">
-                    <label class="label-origem" for="linkedin">Linkedin</label>
-                </div>
-                <div class="div-input-origem">
-                    <input class="origem-radio" type="checkbox" id="behance" autocomplete="off" name="origem[]" value="behance">
-                    <label class="label-origem" for="behance">Behance</label><br>
-                </div>
-                <div class="div-input-origem">
-                    <input class="origem-radio" type="checkbox" id="indicacao" autocomplete="off" name="origem[]" value="indicacao">
-                    <label class="label-origem" for="indicacao">Indicação</label><br>
-                </div>
-                <div class="div-input-origem">
-                    <input class="origem-radio" type="checkbox" id="outro-origem" autocomplete="off" name="origem[]" value="outro">
-                    <label class="label-origem" for="outro-origem">Outro</label><br>
+                <div class="div-input-plataformas">
+                    <input class="plataformas-radio" type="checkbox" id="outra-plataforma" autocomplete="off" name="plataformas[]" value="outra">
+                    <label class="label-plataformas" for="outra-plataforma">Outra</label><br>
                 </div>                                              
             </div>            
-        </div>    
+        </div>
+        
+        <div class="tecnologias">
+            <p class="paragrafos-tecnologias">Tem preferência por alguma tecnologia específica?</p> 
+            <div class="input-tecnologias"> 
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="react" autocomplete="off" name="tecnologias[]" value="react">
+                    <label class="label-tecnologias" for="react">React/React Native</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="angular" autocomplete="off" name="tecnologias[]" value="angular">
+                    <label class="label-tecnologias" for="angular">Angular</label><br>
+                </div>                
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="vue" autocomplete="off" name="tecnologias[]" value="vue">
+                    <label class="label-tecnologias" for="vue">Vue.js</label>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="node" autocomplete="off" name="tecnologias[]" value="node">
+                    <label class="label-tecnologias" for="node">Node.js</label>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="python" autocomplete="off" name="tecnologias[]" value="python">
+                    <label class="label-tecnologias" for="python">Python/Django</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="php" autocomplete="off" name="tecnologias[]" value="php">
+                    <label class="label-tecnologias" for="php">PHP/Laravel</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="java" autocomplete="off" name="tecnologias[]" value="java">
+                    <label class="label-tecnologias" for="java">Java/Spring</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="net" autocomplete="off" name="tecnologias[]" value="net">
+                    <label class="label-tecnologias" for="net">.NET</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="flutter" autocomplete="off" name="tecnologias[]" value="flutter">
+                    <label class="label-tecnologias" for="flutter">Flutter</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="swift" autocomplete="off" name="tecnologias[]" value="swift">
+                    <label class="label-tecnologias" for="swift">Swift</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="kotlin" autocomplete="off" name="tecnologias[]" value="kotlin">
+                    <label class="label-tecnologias" for="kotlin">Kotlin</label><br>
+                </div>
+                <div class="div-input-tecnologias">
+                    <input class="tecnologias-radio" type="checkbox" id="sem-preferencia" autocomplete="off" name="tecnologias[]" value="sem-preferencia">
+                    <label class="label-tecnologias" for="sem-preferencia">Sem preferência</label><br>
+                </div>                                              
+            </div>            
+        </div>
+        
+        <label for="Funcionalidades">Quais são as principais funcionalidades do seu software?</label>
+        <textarea 
+            id="Funcionalidades" 
+            autocomplete="off" name="Funcionalidades" 
+            rows="4" 
+            placeholder="Liste as funcionalidades principais que você imagina para seu software"></textarea>
+        
+        <label for="Integracoes">Precisa de integração com outros sistemas ou APIs?</label>
+        <textarea 
+            id="Integracoes" 
+            autocomplete="off" name="Integracoes" 
+            rows="4" 
+            placeholder="Ex: Pagamentos, redes sociais, ERPs, etc."></textarea>
+        
+        <div class="banco-dados">
+            <p class="paragrafos-banco-dados">Tem preferência por algum banco de dados?</p> 
+            <div class="input-banco-dados"> 
+                <div class="div-input-banco-dados">
+                    <input class="banco-dados-radio" type="checkbox" id="mysql" autocomplete="off" name="banco-dados[]" value="mysql">
+                    <label class="label-banco-dados" for="mysql">MySQL</label><br>
+                </div>
+                <div class="div-input-banco-dados">
+                    <input class="banco-dados-radio" type="checkbox" id="postgresql" autocomplete="off" name="banco-dados[]" value="postgresql">
+                    <label class="label-banco-dados" for="postgresql">PostgreSQL</label><br>
+                </div>                
+                <div class="div-input-banco-dados">
+                    <input class="banco-dados-radio" type="checkbox" id="mongodb" autocomplete="off" name="banco-dados[]" value="mongodb">
+                    <label class="label-banco-dados" for="mongodb">MongoDB</label>
+                </div>
+                <div class="div-input-banco-dados">
+                    <input class="banco-dados-radio" type="checkbox" id="sqlserver" autocomplete="off" name="banco-dados[]" value="sqlserver">
+                    <label class="label-banco-dados" for="sqlserver">SQL Server</label>
+                </div>
+                <div class="div-input-banco-dados">
+                    <input class="banco-dados-radio" type="checkbox" id="oracle" autocomplete="off" name="banco-dados[]" value="oracle">
+                    <label class="label-banco-dados" for="oracle">Oracle</label><br>
+                </div>
+                <div class="div-input-banco-dados">
+                    <input class="banco-dados-radio" type="checkbox" id="firebase" autocomplete="off" name="banco-dados[]" value="firebase">
+                    <label class="label-banco-dados" for="firebase">Firebase</label><br>
+                </div>
+                <div class="div-input-banco-dados">
+                    <input class="banco-dados-radio" type="checkbox" id="sem-preferencia-bd" autocomplete="off" name="banco-dados[]" value="sem-preferencia">
+                    <label class="label-banco-dados" for="sem-preferencia-bd">Sem preferência</label><br>
+                </div>                                              
+            </div>            
+        </div>
+        
+        <div class="servicos-adicionais">
+            <p class="paragrafos-servicos-adicionais">Precisa de algum desses serviços adicionais?</p> 
+            <div class="input-servicos-adicionais"> 
+                <div class="div-input-servicos-adicionais">
+                    <input class="servicos-adicionais-radio" type="checkbox" id="ui-ux" autocomplete="off" name="servicos-adicionais[]" value="ui-ux">
+                    <label class="label-servicos-adicionais" for="ui-ux">Design UI/UX</label><br>
+                </div>
+                <div class="div-input-servicos-adicionais">
+                    <input class="servicos-adicionais-radio" type="checkbox" id="testes" autocomplete="off" name="servicos-adicionais[]" value="testes">
+                    <label class="label-servicos-adicionais" for="testes">Testes de Software</label><br>
+                </div>                
+                <div class="div-input-servicos-adicionais">
+                    <input class="servicos-adicionais-radio" type="checkbox" id="devops" autocomplete="off" name="servicos-adicionais[]" value="devops">
+                    <label class="label-servicos-adicionais" for="devops">DevOps/Implantação</label>
+                </div>
+                <div class="div-input-servicos-adicionais">
+                    <input class="servicos-adicionais-radio" type="checkbox" id="manutencao" autocomplete="off" name="servicos-adicionais[]" value="manutencao">
+                    <label class="label-servicos-adicionais" for="manutencao">Manutenção Contínua</label>
+                </div>
+                <div class="div-input-servicos-adicionais">
+                    <input class="servicos-adicionais-radio" type="checkbox" id="hospedagem" autocomplete="off" name="servicos-adicionais[]" value="hospedagem">
+                    <label class="label-servicos-adicionais" for="hospedagem">Hospedagem/Gerenciamento</label><br>
+                </div>
+                <div class="div-input-servicos-adicionais">
+                    <input class="servicos-adicionais-radio" type="checkbox" id="marketing" autocomplete="off" name="servicos-adicionais[]" value="marketing">
+                    <label class="label-servicos-adicionais" for="marketing">Marketing Digital</label><br>
+                </div>
+                <div class="div-input-servicos-adicionais">
+                    <input class="servicos-adicionais-radio" type="checkbox" id="nenhum-servico" autocomplete="off" name="servicos-adicionais[]" value="nenhum">
+                    <label class="label-servicos-adicionais" for="nenhum-servico">Nenhum</label><br>
+                </div>                                              
+            </div>            
+        </div>
+        
+        <label for="Prazo">Tem algum prazo específico para conclusão do projeto?</label>
+        <input 
+            type="text" 
+            id="Prazo" 
+            autocomplete="off" name="Prazo" 
+            placeholder="Ex: 3 meses, 6 meses, etc.">
         
         <div class="investimento">
-            <p class="paragrafos-investimento">Quanto você pretende investir neste projeto de identidade visual?</p> 
+            <p class="paragrafos-investimento">Qual o orçamento previsto para este projeto?</p> 
             <div class="input-investimento"> 
                 <div class="div-input-investimento">
-                    <input class="investimento-radio" type="radio" id="investimento-800-1000" autocomplete="off" name="investimento" value="800-1000">
-                    <label class="label-investimento" for="investimento-800-1000">De 800 a 1000 reais</label><br>
+                    <input class="investimento-radio" type="radio" id="investimento-5000-10000" autocomplete="off" name="investimento" value="5000-10000">
+                    <label class="label-investimento" for="investimento-5000-10000">De 5.000 a 10.000 reais</label><br>
                 </div>
                 <div class="div-input-investimento">
-                    <input class="investimento-radio" type="radio" id="investimento-1000-1500" autocomplete="off" name="investimento" value="1000-1500">
-                    <label class="label-investimento" for="investimento-1000-1500">De 1000 a 1500 reais</label><br>
+                    <input class="investimento-radio" type="radio" id="investimento-10000-25000" autocomplete="off" name="investimento" value="10000-25000">
+                    <label class="label-investimento" for="investimento-10000-25000">De 10.000 a 25.000 reais</label><br>
                 </div>                
                 <div class="div-input-investimento">
-                    <input class="investimento-radio" type="radio" id="investimento-1500-2500" autocomplete="off" name="investimento" value="1500-2500">
-                    <label class="label-investimento" for="investimento-1500-2500">De 1500 a 2500 reais</label>
+                    <input class="investimento-radio" type="radio" id="investimento-25000-50000" autocomplete="off" name="investimento" value="25000-50000">
+                    <label class="label-investimento" for="investimento-25000-50000">De 25.000 a 50.000 reais</label>
                 </div>
                 <div class="div-input-investimento">
-                    <input class="investimento-radio" type="radio" id="investimento-mais-2500" autocomplete="off" name="investimento" value="mais-2500">
-                    <label class="label-investimento" for="investimento-mais-2500">2500 reais</label>
+                    <input class="investimento-radio" type="radio" id="investimento-mais-50000" autocomplete="off" name="investimento" value="mais-50000">
+                    <label class="label-investimento" for="investimento-mais-50000">Acima de 50.000 reais</label>
+                </div>
+                <div class="div-input-investimento">
+                    <input class="investimento-radio" type="radio" id="investimento-indefinido" autocomplete="off" name="investimento" value="indefinido">
+                    <label class="label-investimento" for="investimento-indefinido">Ainda não definido</label>
                 </div>
             </div>            
         </div>
 
-        <label for="outras-informacoes">Ainda tem algo a dizer? Fique a vontade para contribuir com outras informações.</label>
-        <input 
-            type="text" 
+        <label for="outras-informacoes">Alguma outra informação importante que devemos saber?</label>
+        <textarea 
             id="outras-informacoes" 
             autocomplete="off" name="outras-informacoes" 
-            placeholder="Digite aqui..." 
-            required>
+            rows="4" 
+            placeholder="Digite aqui..."></textarea>
+
+        <input type="hidden" autocomplete="off" name="_autoresponse" value="Obrigado pelo contato! Analisaremos seu projeto de software e entraremos em contato em breve.">
+        <input type="hidden" autocomplete="off" name="_next" value="https://modelo-portfolio-psi.vercel.app/obrigado.html">
+        <input type="hidden" autocomplete="off" name="_captcha" value="false">
 
         <button class="submit" type="submit">Enviar</button>
     </form>
@@ -324,8 +301,8 @@
         </div>
         <div class="footer-content">
             <div class="links">
-                <a href="https://www.behance.net/eulipedesing">Behance</a>
-                <a href="https://www.instagram.com/felipeidentity/">Instagram</a>
+                <a href="https://github.com/IsacGama">GitHub</a>
+                <a href="https://www.linkedin.com/in/IsacGama">linkedin</a>
             </div>
             <button class="go-to-top" id="toTopButton"><img class="seta" src="assets/Seta.png"></button>
         </div>

@@ -125,16 +125,17 @@ main {
 }
 
 .logo-top-img {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin: 0;
+    margin-left: 50px;
     margin-right: 0;
 }
 
 .logo-down {
     width: auto;
     height: 30px;
-    margin-left: 45%;
+    margin-left: 50px;
 }
 
 .button-logo {
@@ -175,7 +176,7 @@ main {
     align-items: center;
 }
 
-.line1, .line2, .line3{
+.line{
     display: flex;
     flex-direction: row;
     gap: 30px;

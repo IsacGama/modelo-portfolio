@@ -90,16 +90,17 @@ main {
 }
 
 .logo-top-img {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin: 0;
+    margin-left: 50px;
     margin-right: 0;
 }
 
 .logo-down {
     width: auto;
     height: 30px;
-    margin-left: 45%;
+    margin-left: 50px;
 }
 
 .button-logo {
@@ -120,7 +121,10 @@ main {
 }
 
 .sobre-o-projeto {
-    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 90%;
 }
 
 .titulo-projeto {
@@ -135,14 +139,15 @@ main {
 }
 
 .paragrafos-projetos {
-    width: 90%;
+    width: 100%;
     text-align: justify;
 }
 
 .paragrafos-info-tecnicas {
     display: flex;
-    flex-direction: row;
-    gap:100px;
+    flex-direction: column;
+    gap:20px;
+    margin-bottom: 10px;
 }
 
 .paragrafo-projeto {
@@ -270,4 +275,24 @@ main {
     width: 85%;
     font-size: 1.12rem;
     margin-left: 4.3%;
+}
+
+.lista-funcionalidades {
+    width: 90%;
+    margin-left: 6%;
+    margin-bottom: 2%;
+    color: darkgray;
+    font-size: 1.15rem;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.lista-funcionalidades li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.lista-funcionalidades li::marker {
+    color: #e2e2e2;
 }

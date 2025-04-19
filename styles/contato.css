@@ -127,18 +127,20 @@ textarea {
     color: #e0e0e0; 
 }
 
-.funcionarios, .investimento{
+.plataformas, .tecnologias, .banco-dados, .servicos-adicionais, .investimento {
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
 }
 
-.paragrafos-funcionarios, .paragrafos-identidade-visual, .paragrafos-servico-adicional, .paragrafos-origem, .paragrafos-investimento{
+.paragrafos-plataformas, .paragrafos-tecnologias, .paragrafos-banco-dados, 
+.paragrafos-servicos-adicionais, .paragrafos-investimento {
     margin-left: 8.5%;
     color: #e0e0e0;
 }
 
-.funcionarios-radio, .investimento-radio {
+.plataformas-radio, .tecnologias-radio, .banco-dados-radio, 
+.servicos-adicionais-radio, .investimento-radio {
     height: 30px;
     width: 30px;
     margin: 0;
@@ -154,7 +156,9 @@ textarea {
     position: relative;
 }
 
-.funcionarios-radio::before, .investimento-radio::before {
+.plataformas-radio::before, .tecnologias-radio::before, 
+.banco-dados-radio::before, .servicos-adicionais-radio::before, 
+.investimento-radio::before {
     content: ''; 
     width: 20px; 
     height: 20px;
@@ -168,59 +172,26 @@ textarea {
     opacity: 0;
 }
 
-.funcionarios-radio:checked::before, .investimento-radio:checked::before {
+.plataformas-radio:checked::before, .tecnologias-radio:checked::before, 
+.banco-dados-radio:checked::before, .servicos-adicionais-radio:checked::before, 
+.investimento-radio:checked::before {
     opacity: 1; 
 }
 
-.identidade-visual-radio, .servico-adicional-radio, .origem-radio {
-    height: 30px;
-    width: 30px;
-    margin: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    appearance: none; 
-    border-radius: 50%;
-    background-color: #20201f;
-    border: none;
-    outline: none;
-    position: relative;
-}
-
-
-.identidade-visual-radio::before, .servico-adicional-radio::before, .origem-radio::before {
-    content: ''; 
-    width: 20px; 
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0; 
-    transition: opacity 0.3s ease-in-out;
-}
-
-
-.identidade-visual-radio:checked::before, .servico-adicional-radio:checked::before, .origem-radio:checked::before {
-    opacity: 1; 
-}
-
-
-.div-input-funcionarios, .div-input-identidade-visual, .div-input-servico-adicional, .div-input-origem, .div-input-investimento {
+.div-input-plataformas, .div-input-tecnologias, .div-input-banco-dados, 
+.div-input-servicos-adicionais, .div-input-investimento {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.div-input-identidade-visual, .div-input-servico-adicional, .div-input-origem, .div-input-investimento {
+.div-input-plataformas,.div-input-tecnologias, .div-input-banco-dados, 
+.div-input-servicos-adicionais, .div-input-investimento {
     margin-bottom: 3.5%;
 }
 
-
-.input-identidade-visual, .input-servico-adicional, .input-origem {
+.input-plataformas, .input-tecnologias, .input-banco-dados, 
+.input-servicos-adicionais {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -228,23 +199,9 @@ textarea {
     margin-left: 8.5%;
     margin-bottom: 1%;
     margin-top: 2.5%;
-
 }
 
-.input-funcionarios {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: left;
-    margin: 0;
-    padding: 0;
-    margin-left: 8.5%;
-    margin-top: 2.5%;
-    margin-bottom: 3%;
-}
-
-.input-investimento  {
+.input-investimento {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -257,12 +214,12 @@ textarea {
     margin-top: 2.5%;
 }
 
-.label-funcionarios, .label-identidade-visual, .label-origem, .label-servico-adicional, .label-investimento {
+.label-plataformas, .label-tecnologias, .label-banco-dados, 
+.label-servicos-adicionais, .label-investimento {
     text-align:left;
     margin: 0;
     margin-left: 10px;
     margin-right: 50px;
-    
 }
 
 a {
@@ -337,16 +294,17 @@ form {
 }
 
 .logo-top-img {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin: 0;
+    margin-left: 50px;
     margin-right: 0;
 }
 
 .logo-down {
     width: auto;
     height: 30px;
-    margin-left: 45%;
+    margin-left: 50px;
 }
 
 .button-logo {
@@ -359,39 +317,39 @@ form {
     cursor: pointer;
 }
 
-  .footer {
+.footer {
     display: flex;
     align-items: center;
     width: 100%;
     height: 70px;
     justify-content: space-between;
     border-top: darkgray solid 1px;
-  }
+}
 
-  .footer-content {
+.footer-content {
     display: flex;
     gap: 20px;
     align-items: center;
     margin-right: 5%;
     font-size: 1.25em;
-  }
+}
 
-  .links {
+.links {
     display: flex;
     gap: 20px;
-  }
+}
 
-  .seta {
+.seta {
     height: auto;
     width: 15px;
-  }
+}
 
-  .go-to-top {
+.go-to-top {
     background-color: transparent;
     outline: none;
     border: none;
     cursor: pointer;
-  }
+}
 
 .hidden {
     opacity: 0;
